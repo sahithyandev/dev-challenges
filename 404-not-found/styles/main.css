@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+.btn {
+  cursor: pointer;
+  border: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono";
+  margin: 0;
+  height: 100vh;
+  padding: 20px 2% 0;
+}
+
+@media (min-width: 800px) {
+  body {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 20px 4% 0;
+  }
+}
+
+header {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: .9em;
+  letter-spacing: -0.08em;
+}
+
+@media (min-width: 800px) {
+  header {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-areas: "img heading" "img message" "img back";
+  grid-template-columns: 38% auto;
+  grid-template-rows: auto auto auto;
+  column-gap: 5%;
+  max-width: 80vw;
+  height: fit-content;
+  margin: auto;
+}
+
+@media (max-width: 800px) {
+  main {
+    grid-template-columns: 40% auto;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    grid-template-areas: "img" "heading" "message" "back";
+    grid-template-columns: 100%;
+    grid-template-rows: 200px auto auto auto;
+    height: 80%;
+    margin-top: 20px;
+  }
+}
+
+#scare-crow-img {
+  grid-area: img;
+  width: 100%;
+  margin: auto;
+  align-self: center;
+}
+
+@media (max-width: 400px) {
+  #scare-crow-img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+#heading {
+  font-size: 3.2rem;
+  grid-area: heading;
+  margin: 0;
+  color: #333333;
+}
+
+@media (max-width: 800px) {
+  #heading {
+    font-size: 2.2rem;
+  }
+}
+
+#message {
+  grid-area: message;
+  width: 40%;
+  min-width: 300px;
+  margin-bottom: 40px;
+  line-height: 26px;
+  color: #4F4F4F;
+}
+
+#back-button {
+  grid-area: back;
+  padding: 18px 32px;
+  background-color: #333333;
+  color: #fff;
+  width: max-content;
+  font-family: "Space Mono";
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+footer.credit {
+  bottom: 10px;
+  font-size: .7em;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: fit-content;
+}

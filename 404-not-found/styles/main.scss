@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import './components/button';
+@import './abstracts/media-queries';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Space Mono";
+    margin: 0;
+    height: 100vh;
+    padding: 20px 2% 0;
+    @include desktop {
+        display: flex;
+        align-items: center;
+    }
+    @include mobile {
+        padding: 20px 4% 0;
+    }
+}
+
+header {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: -0.08em;
+
+    @include desktop {
+        position: absolute;
+        top: 20px;
+        left: 40px
+    }
+}
+
+main {
+    // background-color: blue;
+    display: grid;
+    grid-template-areas:
+        "img heading"
+        "img message"
+        "img back";
+    grid-template-columns: 38% auto;
+    grid-template-rows: auto auto auto;
+    column-gap: 5%;
+    // max-height: 200px;
+    max-width: 80vw;
+    height: fit-content;
+    margin: auto;
+    // position: absolute;
+    // right: 0;
+    // left: 0;
+    // bottom: 0;
+    // top: 0;
+    @include tablet {
+        grid-template-columns: 40% auto;
+    }
+    @include mobile {
+        grid-template-areas:
+            "img"
+            "heading"
+            "message"
+            "back";
+        grid-template-columns: 100%;
+        grid-template-rows: 200px auto auto auto;
+        height: 80%;
+        margin-top: 20px;
+    }
+}
+
+#scare-crow-img {
+    grid-area: img;
+    width: 100%;
+    margin: auto;
+    // min-width: 300px;
+    align-self: center;
+    
+    @include mobile {
+        height: 100%;
+        width: auto;
+    }
+}
+#heading {
+    // background-color: blue;
+    // width: 90%;
+    font-size: 3.2rem;
+    grid-area: heading;
+    margin: 0;
+    // line-height: 95px;
+    color: #333333;
+
+    @include tablet {
+        font-size: 2.2rem;
+    }
+}
+#message {
+    grid-area: message;
+    width: 40%;
+    min-width: 300px;
+    margin-bottom: 40px;
+    line-height: 26px;
+    color: #4F4F4F;
+}
+#back-button {
+    grid-area: back;
+    padding: 18px 32px;
+    background-color: #333333;
+    color: #fff;
+    width: max-content;
+    font-family: "Space Mono";
+    text-transform: uppercase;
+    // font-size: .7em;
+    font-weight: bold;
+}
+
+footer.credit {
+    bottom: 10px;
+    font-size: .7em;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: fit-content;
+}
