@@ -80,6 +80,10 @@ body {
     justify-content: center;
     align-items: center;
 
+    @include desktop {
+        margin-top: 40px;
+    }
+
     @include mobile {
         width: 90vw;
     }

@@ -99,6 +99,12 @@ body {
   align-items: center;
 }
 
+@media (min-width: 800px) {
+  .gallery {
+    margin-top: 40px;
+  }
+}
+
 @media (max-width: 400px) {
   .gallery {
     width: 90vw;
