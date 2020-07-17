@@ -1,0 +1,141 @@
+.credit {
+  font-size: .7rem;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.flex, .flex--column, .flex--column--h-center, body, .account, .account__info__container, .account__info {
+  display: flex;
+}
+
+.flex--column, .flex--column--h-center, body, .account, .account__info__container {
+  flex-direction: column;
+}
+
+.flex--column--h-center, body, .account, .account__info__container {
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat";
+  padding-top: 40px;
+}
+
+.account {
+  margin-bottom: 20px;
+}
+
+.account__profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50px;
+}
+
+.account__name {
+  color: #4E5150;
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 10px;
+  font-size: 1.4em;
+}
+
+@media (max-width: 400px) {
+  .account__name {
+    font-size: 1.2em;
+  }
+}
+
+.account__location {
+  font-weight: 600;
+  color: #A9A9A9;
+  font-size: .9em;
+}
+
+@media (max-width: 400px) {
+  .account__location {
+    font-size: .8em;
+  }
+}
+
+.account__info {
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.account__info__container {
+  background-color: #E5E5E5;
+  padding: 14px;
+  border-radius: 16px;
+  color: #4E5150;
+  min-width: 100px;
+  max-height: 72px;
+  font-size: 16px;
+}
+
+.account__info__container .count {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.account__info__container .detail {
+  font-size: .8em;
+  text-transform: capitalize;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(3, 30%);
+  grid-template-areas: "pic1 pic2 pic2" "pic3 pic3 pic4" "pic6 pic5 pic4";
+  width: 60vw;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 400px) {
+  .gallery {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 800px) {
+  .gallery {
+    width: 92vw;
+  }
+}
+
+.gallery__image {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#photo1 {
+  grid-area: pic1;
+}
+
+#photo2 {
+  grid-area: pic2;
+}
+
+#photo3 {
+  grid-area: pic3;
+}
+
+#photo4 {
+  grid-area: pic4;
+}
+
+#photo5 {
+  grid-area: pic5;
+}
+
+#photo6 {
+  grid-area: pic6;
+}

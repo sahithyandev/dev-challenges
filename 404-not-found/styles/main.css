@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+.credit {
+  font-size: .7rem;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .btn {
   cursor: pointer;
   border: none;
@@ -117,13 +124,11 @@ main {
   font-weight: bold;
 }
 
-footer.credit {
-  bottom: 10px;
-  font-size: .7em;
-  left: 0;
+footer {
+  width: fit-content;
   margin: auto;
   position: absolute;
+  bottom: 10px;
+  left: 0;
   right: 0;
-  text-align: center;
-  width: fit-content;
 }

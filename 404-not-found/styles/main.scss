@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import './../../global';
 @import './components/button';
 @import './abstracts/media-queries';
 
@@ -112,14 +113,12 @@ main {
     // font-size: .7em;
     font-weight: bold;
 }
-
-footer.credit {
-    bottom: 10px;
-    font-size: .7em;
-    left: 0;
-    margin: auto;
-    position: absolute;
-    right: 0;
-    text-align: center;
+footer {
     width: fit-content;
+    margin: auto;
+    
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
 }
