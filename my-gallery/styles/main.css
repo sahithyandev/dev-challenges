@@ -7,19 +7,27 @@
 }
 
 .flex, .flex--column, .flex--column--h-center, body, .account, .account__info__container, .account__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .flex--column, .flex--column--h-center, body, .account, .account__info__container {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .flex--column--h-center, body, .account, .account__info__container {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -90,14 +98,21 @@ body {
 }
 
 .gallery {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, 30%);
-  grid-template-rows: repeat(3, 30%);
-  grid-template-areas: "pic1 pic2 pic2" "pic3 pic3 pic4" "pic6 pic5 pic4";
+  -ms-grid-columns: (30%)[3];
+      grid-template-columns: repeat(3, 30%);
+  -ms-grid-rows: (30%)[3];
+      grid-template-rows: repeat(3, 30%);
+      grid-template-areas: "pic1 pic2 pic2" "pic3 pic3 pic4" "pic6 pic5 pic4";
   width: 60vw;
   gap: 18px;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (min-width: 800px) {
@@ -124,25 +139,40 @@ body {
 }
 
 #photo1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: pic1;
 }
 
 #photo2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: pic2;
 }
 
 #photo3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: pic3;
 }
 
 #photo4 {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
   grid-area: pic4;
 }
 
 #photo5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
   grid-area: pic5;
 }
 
 #photo6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: pic6;
 }
