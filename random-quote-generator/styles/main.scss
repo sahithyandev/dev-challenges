@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import './../../global';
+@import './abstracts/abstracts-dir';
+
+body {
+    @extend .grid;
+    font-family: Raleway;
+    margin: 0;
+    // justify-content: stretch;
+    height: 100vh;
+    grid-template-rows: 8% auto 4%;
+}
+
+header {
+    @extend .flex;
+    align-items: center;
+    justify-content: flex-end;
+    // margin: 10px 0;
+    padding-right: 40px;
+}
+
+.random-container {
+    @extend .flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4F4F4F;
+}
+main {
+    @extend .flex;
+    // background-color: red;
+    width: 100vw;
+}
+.quote {
+    // display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+.quote__content, .quote__author {
+    padding-left: 20px;
+}
+
+.quote__content {
+    font-size: 36px;
+    max-width: 600px;
+    position: relative;
+    
+    &::before {
+        content: '';
+        display: block;
+        background-color: #F7DF94;
+        width: 8px;
+
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        left: -80px;
+    }
+}
+
+.quote__author {
+    --name-color: #4F4F4F;
+    @extend .flex--column;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    cursor: pointer;
+    
+    transition: all .3s;
+    
+    &:hover {
+        background-color: #333333;
+
+        .icon {
+            display: inline;
+            opacity: 1;
+        }
+        --name-color: #F2F2F2;
+    }
+}
+.quote__author__name {
+    width: fit-content;
+    color: var(--name-color);
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.quote__author__category {
+    width: fit-content;
+    color: #828282;
+    font-size: .8em;
+    font-weight: 500;
+}
+
+.quote__author__next-icon {
+    align-self: flex-end;
+    display: none;
+    opacity: 0;
+    width: fit-content;
+    transition: all .4s;
+    color: white;
+}
+
+footer {
+    margin: 0 !important;
+    
+}
