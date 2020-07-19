@@ -1,6 +1,3 @@
 {
-    "trailingSlash": true,
-    "routes": [
-        { "src": "/random-quote-generator/author/<id>", "dest": "/random-quote-generator/author/index.html?id=$id" }
-    ]
+    "trailingSlash": true
 }
