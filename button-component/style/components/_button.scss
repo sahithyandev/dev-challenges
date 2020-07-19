@@ -1,0 +1,102 @@
+.button {
+    --default-bg: #E0E0E0;
+    --default-color: #3F3F3F;
+    --primary-bg: #2962FF;
+    --primary-color: #3D5AFE;
+    --secondary-bg: #455A64;
+    --danger-bg: #D32F2F;
+    --color: #FFFFFF;
+    --disabled-color: #9E9E9E;
+
+    border: none;
+    display: inline-block;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    padding: 8px 16px;
+    box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+    border-radius: 6px;
+    text-align: center;
+    width: fit-content;
+
+    background-color: var(--bg);
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+.disableShadow {
+    box-shadow: none !important;
+}
+
+.button--outline, .button--text {
+    @extend .button;
+}
+
+.button--outline {
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.button--text {
+    @extend .disableShadow;
+    background-color: transparent;
+    color: var(--primary-color);
+
+    &:disabled {
+        color: var(--disabled-color);
+    }
+}
+
+.button[startIcon], .button[endIcon] {
+    background-color: var(--primary-bg);
+    color: var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button[startIcon]::before, .button[endIcon]::after {
+    font-size: 18px;
+    font-family: "Material Icons";
+}
+
+.button[startIcon]::before {
+    content: attr(startIcon);
+    margin-right: 6px;
+}
+
+.button[endIcon]::after {
+    content: attr(endIcon);
+    margin-left: 6px;
+}
+
+.button[size="sm"] {
+    padding: 6px 12px;
+}
+.button[size="md"] {
+    padding: 8px 16px;
+}
+.button[size="lg"] {
+    padding: 11px 22px;
+}
+
+.button, .button[color="default"] {
+    --bg: var(--default-bg);
+}
+.button[color="primary"] {
+    --bg: var(--primary-bg);
+}
+.button[color="secondary"] {
+    --bg: var(--secondary-bg);
+}
+.button[color="danger"] {
+    --bg: var(--danger-bg);
+}
+.button[color="primary"], .button[color="secondary"], .button[color="danger"] {
+    color: var(--color);
+}

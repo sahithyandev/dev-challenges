@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import './components/button';
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    gap: 10px;
+    margin: auto;
+}
