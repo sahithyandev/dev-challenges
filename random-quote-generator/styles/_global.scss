@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import './../../global';
+@import './abstracts/abstracts-dir';
+@import './components/components-dir';
+
+body {
+    font-family: Raleway;
+    margin: 0;
+}
+
+header {
+    @extend .flex;
+    // align-items: center;
+    justify-content: flex-end;
+    margin: 10px 0;
+    padding-right: 40px;
+    height: fit-content;
+
+    .random-container {
+        @extend .flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #4F4F4F;
+        cursor: pointer;
+    }
+}
+
+main {
+    @extend .flex;
+    // background-color: red;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+::selection {
+    background-color: black;
+    color: white;
+}

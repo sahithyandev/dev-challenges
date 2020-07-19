@@ -1,49 +1,17 @@
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import './../../global';
-@import './abstracts/abstracts-dir';
-@import './components/components-dir';
-
-body {
-    @extend .grid;
-    font-family: Raleway;
-    margin: 0;
-    // justify-content: stretch;
-    height: 100vh;
-    grid-template-rows: 8% auto 4%;
-}
-
-header {
-    @extend .flex;
-    align-items: center;
-    justify-content: flex-end;
-    // margin: 10px 0;
-    padding-right: 40px;
-}
-
-.random-container {
-    @extend .flex;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #4F4F4F;
-}
-main {
-    @extend .flex;
-    // background-color: red;
-    width: 100vw;
-}
 .quote {
     // display: block;
+    --yellow-line-outset: 60px;
+    --content-padding: 20px;
     width: fit-content;
-    margin: auto;
+    font-size: 1em;
 }
 
 .quote__content, .quote__author {
-    padding-left: 20px;
+    padding-left: var(--content-padding);
 }
 
 .quote__content {
-    font-size: 36px;
+    font-size: 2em;
     max-width: 600px;
     position: relative;
     
@@ -57,10 +25,9 @@ main {
         top: 0;
         bottom: 0;
         z-index: -1;
-        left: -80px;
+        left: calc(-1 * var(--yellow-line-outset));
     }
 }
-
 .quote__author {
     --name-color: #4F4F4F;
     @extend .flex--column;
@@ -73,7 +40,7 @@ main {
     margin-top: 20px;
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-right: 20px;
+    padding-right: var(--content-padding);
     cursor: pointer;
     
     transition: all .3s;
@@ -95,7 +62,7 @@ main {
     font-weight: bold;
     margin-bottom: 6px;
 }
-.quote__author__category {
+.quote__author__genre {
     width: fit-content;
     color: #828282;
     font-size: .8em;
@@ -109,9 +76,4 @@ main {
     width: fit-content;
     transition: all .4s;
     color: white;
-}
-
-footer {
-    margin: 0 !important;
-    
 }

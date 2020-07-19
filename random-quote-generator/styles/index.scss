@@ -1,0 +1,12 @@
+@import './global';
+
+body {
+    @extend .grid;
+    // justify-content: stretch;
+    height: 100vh;
+    grid-template-rows: min-content auto 4%;
+}
+
+footer {
+    margin: 0 !important;
+}

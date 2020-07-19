@@ -1,0 +1,39 @@
+@import './global';
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin-top: 10px;
+}
+main {
+    @extend .flex--column;
+    width: fit-content;
+    margin: auto;
+    // background-color: blueviolet;
+    --content-padding: 20px;
+}
+
+.author-container {
+    // background-color: red;
+    width: 100%;
+    color: #333333;
+    padding-left: var(--content-padding);
+}
+
+#author {
+    font-size: 1.6em;
+}
+
+#quote-container {
+    // background-color: blue;
+    margin-top: 28px;
+}
+
+.quote {
+    // background-color: #f1f1f1f1;
+    --yellow-line-outset: 40px;
+    margin-bottom: 40px;
+    font-size: .8em;
+}
