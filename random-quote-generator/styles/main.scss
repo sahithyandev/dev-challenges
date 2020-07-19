@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import './../../global';
 @import './abstracts/abstracts-dir';
+@import './components/components-dir';
 
 body {
     @extend .grid;
