@@ -1,11 +1,22 @@
 .button {
     --default-bg: #E0E0E0;
     --default-color: #3F3F3F;
+    --default-hover-bg: #AEAEAE;
+
+    --outline-hover-bg: #2962ff1a;
+
     --primary-bg: #2962FF;
     --primary-color: #3D5AFE;
+    --primary-hover-bg: #0039CB;
+    
     --secondary-bg: #455A64;
-    --danger-bg: #D32F2F;
+    --secondary-hover-bg: #1C313A;
+
+    --danger-bg: #d33131;
+    --danger-hover-bg: #990008;
+    
     --color: #FFFFFF;
+    
     --disabled-color: #9E9E9E;
 
     border: none;
@@ -17,15 +28,19 @@
     font-family: "Noto Sans JP";
     font-size: 14px;
     padding: 8px 16px;
-    box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+    box-shadow: 0px 2px 3px #33333333;
     border-radius: 6px;
     text-align: center;
     width: fit-content;
-
+    
+    transition: background-color .3s;
     background-color: var(--bg);
 
     &:disabled {
         cursor: not-allowed;
+    }
+    &:not(:disabled):hover, &:not(:disabled):focus {
+        background-color: var(--default-hover-bg);
     }
 }
 
@@ -41,24 +56,36 @@
     border: 1px solid var(--primary-color);
     background-color: transparent;
     color: var(--primary-color);
+
+    &:not(:disabled):hover, &:not(:disabled):focus {
+        background-color: var(--outline-hover-bg);
+    }
 }
 
 .button--text {
     @extend .disableShadow;
     background-color: transparent;
     color: var(--primary-color);
-
+    
     &:disabled {
         color: var(--disabled-color);
+    }
+    
+    &:not(:disabled):hover, &:not(:disabled):focus {
+        background-color: var(--outline-hover-bg);
     }
 }
 
 .button[startIcon], .button[endIcon] {
     background-color: var(--primary-bg);
     color: var(--color);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    &:not(:disabled):hover, &:not(:disabled):focus {
+        background-color: var(--primary-hover-bg);
+    }
 }
 .button[startIcon]::before, .button[endIcon]::after {
     font-size: 18px;
@@ -90,12 +117,21 @@
 }
 .button[color="primary"] {
     --bg: var(--primary-bg);
+    &:not(:disabled):hover, &:not(:disabled):focus {
+        background-color: var(--primary-hover-bg);
+    }
 }
 .button[color="secondary"] {
     --bg: var(--secondary-bg);
+    &:not(:disabled):hover, &:not(:disabled):focus {
+        background-color: var(--secondary-hover-bg);
+    }
 }
 .button[color="danger"] {
     --bg: var(--danger-bg);
+    &:not(:disabled):hover, &:not(:disabled):focus {
+        background-color: var(--danger-hover-bg);
+    }
 }
 .button[color="primary"], .button[color="secondary"], .button[color="danger"] {
     color: var(--color);

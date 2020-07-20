@@ -2,10 +2,15 @@
 .button, .button--outline, .button--text {
   --default-bg: #E0E0E0;
   --default-color: #3F3F3F;
+  --default-hover-bg: #AEAEAE;
+  --outline-hover-bg: #2962ff1a;
   --primary-bg: #2962FF;
   --primary-color: #3D5AFE;
+  --primary-hover-bg: #0039CB;
   --secondary-bg: #455A64;
-  --danger-bg: #D32F2F;
+  --secondary-hover-bg: #1C313A;
+  --danger-bg: #d33131;
+  --danger-hover-bg: #990008;
   --color: #FFFFFF;
   --disabled-color: #9E9E9E;
   border: none;
@@ -16,18 +21,24 @@
   font-family: "Noto Sans JP";
   font-size: 14px;
   padding: 8px 16px;
-  -webkit-box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
-          box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+  -webkit-box-shadow: 0px 2px 3px #33333333;
+          box-shadow: 0px 2px 3px #33333333;
   border-radius: 6px;
   text-align: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
   background-color: var(--bg);
 }
 
 .button:disabled, .button--outline:disabled, .button--text:disabled {
   cursor: not-allowed;
+}
+
+.button:not(:disabled):hover, .button--outline:not(:disabled):hover, .button--text:not(:disabled):hover, .button:not(:disabled):focus, .button--outline:not(:disabled):focus, .button--text:not(:disabled):focus {
+  background-color: var(--default-hover-bg);
 }
 
 .disableShadow, .button--text {
@@ -41,6 +52,10 @@
   color: var(--primary-color);
 }
 
+.button--outline:not(:disabled):hover, .button--outline:not(:disabled):focus {
+  background-color: var(--outline-hover-bg);
+}
+
 .button--text {
   background-color: transparent;
   color: var(--primary-color);
@@ -50,18 +65,26 @@
   color: var(--disabled-color);
 }
 
+.button--text:not(:disabled):hover, .button--text:not(:disabled):focus {
+  background-color: var(--outline-hover-bg);
+}
+
 .button[startIcon], .button--outline[startIcon], .button--text[startIcon], .button[endIcon], .button--outline[endIcon], .button--text[endIcon] {
   background-color: var(--primary-bg);
   color: var(--color);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.button[startIcon]:not(:disabled):hover, .button--outline[startIcon]:not(:disabled):hover, .button--text[startIcon]:not(:disabled):hover, .button[startIcon]:not(:disabled):focus, .button--outline[startIcon]:not(:disabled):focus, .button--text[startIcon]:not(:disabled):focus, .button[endIcon]:not(:disabled):hover, .button--outline[endIcon]:not(:disabled):hover, .button--text[endIcon]:not(:disabled):hover, .button[endIcon]:not(:disabled):focus, .button--outline[endIcon]:not(:disabled):focus, .button--text[endIcon]:not(:disabled):focus {
+  background-color: var(--primary-hover-bg);
 }
 
 .button[startIcon]::before, .button--outline[startIcon]::before, .button--text[startIcon]::before, .button[endIcon]::after, .button--outline[endIcon]::after, .button--text[endIcon]::after {
@@ -99,12 +122,24 @@
   --bg: var(--primary-bg);
 }
 
+.button[color="primary"]:not(:disabled):hover, .button--outline[color="primary"]:not(:disabled):hover, .button--text[color="primary"]:not(:disabled):hover, .button[color="primary"]:not(:disabled):focus, .button--outline[color="primary"]:not(:disabled):focus, .button--text[color="primary"]:not(:disabled):focus {
+  background-color: var(--primary-hover-bg);
+}
+
 .button[color="secondary"], .button--outline[color="secondary"], .button--text[color="secondary"] {
   --bg: var(--secondary-bg);
 }
 
+.button[color="secondary"]:not(:disabled):hover, .button--outline[color="secondary"]:not(:disabled):hover, .button--text[color="secondary"]:not(:disabled):hover, .button[color="secondary"]:not(:disabled):focus, .button--outline[color="secondary"]:not(:disabled):focus, .button--text[color="secondary"]:not(:disabled):focus {
+  background-color: var(--secondary-hover-bg);
+}
+
 .button[color="danger"], .button--outline[color="danger"], .button--text[color="danger"] {
   --bg: var(--danger-bg);
+}
+
+.button[color="danger"]:not(:disabled):hover, .button--outline[color="danger"]:not(:disabled):hover, .button--text[color="danger"]:not(:disabled):hover, .button[color="danger"]:not(:disabled):focus, .button--outline[color="danger"]:not(:disabled):focus, .button--text[color="danger"]:not(:disabled):focus {
+  background-color: var(--danger-hover-bg);
 }
 
 .button[color="primary"], .button--outline[color="primary"], .button--text[color="primary"], .button[color="secondary"], .button--outline[color="secondary"], .button--text[color="secondary"], .button[color="danger"], .button--outline[color="danger"], .button--text[color="danger"] {
@@ -122,4 +157,11 @@
   width: 60vw;
   gap: 10px;
   margin: auto;
+}
+
+.icon-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
 }
