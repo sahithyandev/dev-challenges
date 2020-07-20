@@ -146,6 +146,13 @@
   color: var(--color);
 }
 
+.credit {
+  font-size: .7rem;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .button-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,6 +164,7 @@
   width: 60vw;
   gap: 10px;
   margin: auto;
+  padding-bottom: 40px;
 }
 
 .icon-buttons {

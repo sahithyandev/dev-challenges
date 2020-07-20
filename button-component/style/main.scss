@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import './components/button';
+@import './../../global';
 
 .button-container {
     display: flex;
@@ -7,6 +8,7 @@
     width: 60vw;
     gap: 10px;
     margin: auto;
+    padding-bottom: 40px;
 }
 
 .icon-buttons {
