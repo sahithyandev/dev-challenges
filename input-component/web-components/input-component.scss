@@ -1,0 +1,47 @@
+#input-element {
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    font-family: "Noto Sans JP";
+    
+    .label {
+        font-size: 12px;
+        color: var(--label-color);
+    }
+    input {
+        margin: 4px 0px;
+        padding: 18px 12px;
+        font-size: 14px;
+        border-radius: 8px;
+        border: var(--border-width) solid var(--border-color);
+        box-sizing: border-box;
+    }
+    .helper-text {
+        color: var(--helper-text-color);
+        font-size: 10px;
+    }
+}
+
+#input-element:hover {
+    .label {
+        // color: var(--hover-label-color);
+        --label-color: var(--hover-label-color);
+    }
+    input {
+        --border-width: var(--hover-border-width);
+        --border-color: var(--hover-border-color);
+    }
+}
+
+#input-element:focus-within {
+    input {
+        --border-color: var(--focus-border-color);
+        --border-width: var(--focus-border-width);
+        // border-color: var(--focus-border-color);
+    }
+
+    .label {
+        --label-color: var(--focus-label-color);
+        // color: var(--focus-label-color);
+    }
+}

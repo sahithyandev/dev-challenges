@@ -1,0 +1,48 @@
+#input-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Noto Sans JP";
+}
+
+#input-element .label {
+  font-size: 12px;
+  color: var(--label-color);
+}
+
+#input-element input {
+  margin: 4px 0px;
+  padding: 18px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: var(--border-width) solid var(--border-color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#input-element .helper-text {
+  color: var(--helper-text-color);
+  font-size: 10px;
+}
+
+#input-element:hover .label {
+  --label-color: var(--hover-label-color);
+}
+
+#input-element:hover input {
+  --border-width: var(--hover-border-width);
+  --border-color: var(--hover-border-color);
+}
+
+#input-element:focus-within input {
+  --border-color: var(--focus-border-color);
+  --border-width: var(--focus-border-width);
+}
+
+#input-element:focus-within .label {
+  --label-color: var(--focus-label-color);
+}

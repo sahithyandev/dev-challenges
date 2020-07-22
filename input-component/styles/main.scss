@@ -1,6 +1,15 @@
 @import './components/index';
 @import './../../global';
 
+main {
+    width: 40vw;
+    margin: auto;
+}
+
 .input-container {
-    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+    // margin: auto;
 }

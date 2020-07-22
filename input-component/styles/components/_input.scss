@@ -1,0 +1,36 @@
+$variable-names: border-color, label-color, border-width;
+
+input-wc {
+    --default-border-color: #828282;
+    --default-label-color: #333333;
+    --default-border-width: 1px;
+    
+    // hover variables
+    --hover-border-color: #333333;
+    --hover-label-color: #333333;
+    --hover-border-width: 1px;
+    
+    // focus variables
+    --focus-border-color: #2962FF;
+    --focus-label-color: #2962FF;   
+    --focus-border-width: 2px;
+
+
+    @each $var in $variable-names {
+        --#{$var}: var(--default-#{$var});
+    }
+}
+
+input-wc[error] {
+    --default-label-color: #D32F2F;
+    --default-border-color: #D32F2F;
+    --default-border-width: 1px;
+    
+    --hover-label-color: #D32F2F;
+    --hover-border-color: #D32F2F;
+    --hover-border-width: 1px;
+    
+    --focus-label-color: #D32F2F;
+    --focus-border-color: #D32F2F;
+    --focus-border-width: 2px;
+}
