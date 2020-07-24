@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 #input-element {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7,6 +8,10 @@
       -ms-flex-direction: column;
           flex-direction: column;
   font-family: "Noto Sans JP";
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
 }
 
 #input-element .label {
@@ -14,14 +19,20 @@
   color: var(--label-color);
 }
 
-#input-element input {
+#input-element .input {
   margin: 4px 0px;
-  padding: 18px 12px;
+  padding: var(--padding, 18px 12px);
   font-size: 14px;
   border-radius: 8px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: "Noto Sans JP";
   border: var(--border-width) solid var(--border-color);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: var(--background-color);
+  resize: none;
 }
 
 #input-element .helper-text {
@@ -29,20 +40,40 @@
   font-size: 10px;
 }
 
-#input-element:hover .label {
+#input-element .input-icon {
+  position: absolute;
+  top: 45%;
+  left: 2%;
+  color: var(--border-color);
+}
+
+#input-element #start-icon ~ input {
+  padding-left: calc(2% + 24px);
+}
+
+#input-element #end-icon {
+  left: auto !important;
+  right: 2% !important;
+}
+
+#input-element:not([disabled]):hover .label {
   --label-color: var(--hover-label-color);
 }
 
-#input-element:hover input {
+#input-element:not([disabled]):hover .input {
   --border-width: var(--hover-border-width);
   --border-color: var(--hover-border-color);
 }
 
-#input-element:focus-within input {
-  --border-color: var(--focus-border-color);
-  --border-width: var(--focus-border-width);
+#input-element:not([disabled]):focus-within .input {
+  --border-color: var(--focus-border-color) !important;
+  --border-width: var(--focus-border-width) !important;
 }
 
-#input-element:focus-within .label {
-  --label-color: var(--focus-label-color);
+#input-element:not([disabled]):focus-within .label {
+  --label-color: var(--focus-label-color) !important;
+}
+
+.full-width {
+  width: 100% !important;
 }

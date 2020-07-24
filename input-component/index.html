@@ -14,12 +14,36 @@
         <div class="input-container">
             <input-wc></input-wc>
             <input-wc error></input-wc>
+            <input-wc disabled></input-wc>
+
+            <h4>With helper-text</h4>
+            <div class="section">
+                <input-wc helper-text="Some interesting text"></input-wc>
+                <input-wc helper-text="Some interesting text" error></input-wc>
+            </div>
+            <h4>With icons</h4>
+            <div class="section">
+                <input-wc start-icon="local_phone"></input-wc>
+                <input-wc end-icon="lock"></input-wc>
+            </div>
+            <input-wc value="Text"></input-wc>
+            <h4>In different sizes</h4>
+            <div class="section">
+                <input-wc size="sm"></input-wc>
+                <input-wc size="md"></input-wc>
+            </div>
+            <input-wc full-width></input-wc>
+            <input-wc multiline row="4"></input-wc>
             <!-- <input type="text" class="input" aria-label="Label" /> -->
             <!-- <input type="text" class="input input--error" /> -->
             <!-- <input type="text" class="input input--disabled" /> -->
         </div>
         
     </main>
+
+    <footer class="credit">
+        Sahithyan @ devchallenges.io
+    </footer>
 
     <script src="./web-components/input-component.js"></script>
 </body>

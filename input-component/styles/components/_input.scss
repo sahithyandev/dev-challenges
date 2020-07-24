@@ -1,10 +1,12 @@
-$variable-names: border-color, label-color, border-width;
+$variable-names: border-color, label-color, border-width, background-color, helper-text-color;
 
 input-wc {
     --default-border-color: #828282;
     --default-label-color: #333333;
     --default-border-width: 1px;
-    
+    --default-background-color: #00000000;
+    --default-helper-text-color: #828282;
+
     // hover variables
     --hover-border-color: #333333;
     --hover-label-color: #333333;
@@ -15,7 +17,6 @@ input-wc {
     --focus-label-color: #2962FF;   
     --focus-border-width: 2px;
 
-
     @each $var in $variable-names {
         --#{$var}: var(--default-#{$var});
     }
@@ -25,6 +26,7 @@ input-wc[error] {
     --default-label-color: #D32F2F;
     --default-border-color: #D32F2F;
     --default-border-width: 1px;
+    --default-helper-text-color: #D32F2F;
     
     --hover-label-color: #D32F2F;
     --hover-border-color: #D32F2F;
@@ -33,4 +35,14 @@ input-wc[error] {
     --focus-label-color: #D32F2F;
     --focus-border-color: #D32F2F;
     --focus-border-width: 2px;
+}
+
+input-wc[disabled] {
+    --default-background-color: #F2F2F2;
+    --default-border-color: #E0E0E0;
+    --default-label-color: #828282;
+}
+
+input-wc[size="sm"] {
+    --padding: 10px 12px;
 }

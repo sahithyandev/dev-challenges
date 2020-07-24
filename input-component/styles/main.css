@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 input-wc {
   --default-border-color: #828282;
   --default-label-color: #333333;
   --default-border-width: 1px;
+  --default-background-color: #00000000;
+  --default-helper-text-color: #828282;
   --hover-border-color: #333333;
   --hover-label-color: #333333;
   --hover-border-width: 1px;
@@ -11,18 +14,31 @@ input-wc {
   --border-color: var(--default-border-color);
   --label-color: var(--default-label-color);
   --border-width: var(--default-border-width);
+  --background-color: var(--default-background-color);
+  --helper-text-color: var(--default-helper-text-color);
 }
 
 input-wc[error] {
   --default-label-color: #D32F2F;
   --default-border-color: #D32F2F;
   --default-border-width: 1px;
+  --default-helper-text-color: #D32F2F;
   --hover-label-color: #D32F2F;
   --hover-border-color: #D32F2F;
   --hover-border-width: 1px;
   --focus-label-color: #D32F2F;
   --focus-border-color: #D32F2F;
   --focus-border-width: 2px;
+}
+
+input-wc[disabled] {
+  --default-background-color: #F2F2F2;
+  --default-border-color: #E0E0E0;
+  --default-label-color: #828282;
+}
+
+input-wc[size="sm"] {
+  --padding: 10px 12px;
 }
 
 .credit {
@@ -35,6 +51,7 @@ input-wc[error] {
 main {
   width: 40vw;
   margin: auto;
+  margin-bottom: 100px;
 }
 
 .input-container {
@@ -49,4 +66,11 @@ main {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
 }

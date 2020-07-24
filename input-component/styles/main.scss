@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import './components/index';
 @import './../../global';
 
 main {
     width: 40vw;
     margin: auto;
+    margin-bottom: 100px;
 }
 
 .input-container {
@@ -12,4 +14,9 @@ main {
     gap: 10px;
     width: fit-content;
     // margin: auto;
+}
+
+.section {
+    display: flex;
+    gap: 10px;
 }
