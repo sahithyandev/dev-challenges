@@ -1,5 +1,94 @@
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
 @import './../../global';
+@import './base/index';
+@import './abstracts/index';
+@import './components/index';
+
+body {
+    margin: 20px;
+    // padding: 0;
+    font-size: 16px;
+}
 
 main {
     // use grid
+    min-height: 100vh;
+
+    @include desktop {
+        max-width: 60vw;
+        margin: auto;
+    }
+        
+    @include mobile {
+        // max-width: 100vw;
+        // width: max-content;
+    }
+}
+img:not(:first-child) {
+    width: 100%;
+}
+
+.recipe_title {
+    @extend .font__playfair-display;
+    font-weight: bold;
+    font-size: 3rem;
+    
+    margin-top: 52px;
+    margin-bottom: 12px;
+    
+    @include mobile {
+        margin-top: 20px;
+        font-size: 1.8rem;
+    }
+}
+
+.recipe_description {
+    @extend  .flex, .font__montserrat;
+    font-style: italic;
+    font-size: 0.875rem;
+    width: 600px;
+    max-width: 100%;
+    gap: 10px;
+    align-items: flex-start;
+
+    @include mobile {
+        font-size: .75rem;
+    }
+
+    #dot-icon {
+        margin-top: 3px;
+        // border: 1px solid red;
+        // width: 100px;
+        // height: 1em;
+        // margin-right: 6px;
+    }
+
+    .recipe_description_text {
+        margin-top: 0px;
+
+        @include mobile {
+            max-width: 90%;
+        }
+    }
+}
+
+section {
+    .section_title {
+        @extend .font__playfair-display, .bold;
+        font-size: 1.4rem;
+    }
+    .section_subtitle {
+        @extend .font__playfair-display, .italic;
+        color: #333333;
+        font-weight: normal;
+    }
+}
+
+.reference {
+    @extend .font__montserrat, .italic;
+    color: #BDBDBD;
+    font-size: .75rem;
 }

@@ -1,0 +1,35 @@
+.custom-ordered-list {
+    list-style: none;
+    padding-left: 0px;
+    list-style-position: outside;
+
+    counter-reset: li-counter 0;
+
+    li {
+        @extend .flex, .font__montserrat;
+        counter-increment: li-counter;
+        margin-bottom: 10px;
+        gap: 10px;
+        font-weight: 200;
+        font-style: 1rem;
+        font-weight: normal;
+        font-style: normal;
+        
+        b {
+            font-family: Montserrat;
+            font-weight: 700;
+            font-weight: bolder;
+        }
+    }
+
+    li::before {
+        padding: 4px 13px 5px 13px;
+        height: fit-content;
+        border-radius: 6px;
+
+        content: counter(li-counter);
+        background-color: $orange;
+        color: white;
+        font-size: 1rem;
+    }
+}

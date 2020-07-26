@@ -1,6 +1,155 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 .credit {
   font-size: .7rem;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.font__playfair-display, .recipe_title, section .section_title, section .section_subtitle {
+  font-family: "Playfair Display";
+}
+
+.font__montserrat, .custom-ordered-list li, .recipe_description, .reference {
+  font-family: "Montserrat";
+}
+
+.bold, section .section_title {
+  font-weight: bold;
+}
+
+.italic, section .section_subtitle, .reference {
+  font-style: italic;
+}
+
+.flex, .flex--column, .custom-ordered-list li, .recipe_description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex--column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.custom-ordered-list {
+  list-style: none;
+  padding-left: 0px;
+  list-style-position: outside;
+  counter-reset: li-counter 0;
+}
+
+.custom-ordered-list li {
+  counter-increment: li-counter;
+  margin-bottom: 10px;
+  gap: 10px;
+  font-weight: 200;
+  font-style: 1rem;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.custom-ordered-list li b {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-weight: bolder;
+}
+
+.custom-ordered-list li::before {
+  padding: 4px 13px 5px 13px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 6px;
+  content: counter(li-counter);
+  background-color: #F2994A;
+  color: white;
+  font-size: 1rem;
+}
+
+body {
+  margin: 20px;
+  font-size: 16px;
+}
+
+main {
+  min-height: 100vh;
+}
+
+@media (min-width: 1000px) {
+  main {
+    max-width: 60vw;
+    margin: auto;
+  }
+}
+
+img:not(:first-child) {
+  width: 100%;
+}
+
+.recipe_title {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-top: 52px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 450px) {
+  .recipe_title {
+    margin-top: 20px;
+    font-size: 1.8rem;
+  }
+}
+
+.recipe_description {
+  font-style: italic;
+  font-size: 0.875rem;
+  width: 600px;
+  max-width: 100%;
+  gap: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 450px) {
+  .recipe_description {
+    font-size: .75rem;
+  }
+}
+
+.recipe_description #dot-icon {
+  margin-top: 3px;
+}
+
+.recipe_description .recipe_description_text {
+  margin-top: 0px;
+}
+
+@media (max-width: 450px) {
+  .recipe_description .recipe_description_text {
+    max-width: 90%;
+  }
+}
+
+section .section_title {
+  font-size: 1.4rem;
+}
+
+section .section_subtitle {
+  color: #333333;
+  font-weight: normal;
+}
+
+.reference {
+  color: #BDBDBD;
+  font-size: .75rem;
 }
