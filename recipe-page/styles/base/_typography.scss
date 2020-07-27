@@ -1,9 +1,15 @@
+@import './variables';
+
 .font__playfair-display {
     font-family: "Playfair Display";
 }
 
 .font__montserrat {
     font-family: "Montserrat";
+}
+
+.color__orange {
+    color: $orange !important;
 }
 
 .bold {

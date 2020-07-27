@@ -13,46 +13,75 @@
             <img src="./images/6dots.svg" alt="6-dots-icon" id="dot-icon" class="a" />
             <p class="recipe_description_text">Look no further for a creamy and ultra smooth classic cheesecake recipe! Paired with a buttery graham cracker crust, no one can deny its simple decadence. For the best results, bake in a water bath.</p>
         </div>
-        <img src="./images/photo1.png" alt="preview" />
+        <img src="./images/photo1.png" alt="preview" id="hero-image" />
 
-        <section>
-            <ul>
-                <li>
-                    <span>Yields</span>
-                    <span>12 servings</span>
+        <div class="section-container">
+        <section id="recipe_details-section">
+            <ul class="list--no-dots recipe_details">
+                <li startIcon="local_dining">
+                    <span class="recipe_details-category">Yields</span>
+                    <span class="recipe_details-value">12 servings</span>
                 </li>
-                <li>
-                    <span>Prep time</span>
-                    <span>45 minutes</span>
+                <li startIcon="schedule">
+                    <span class="recipe_details-category">Prep time</span>
+                    <span class="recipe_details-value">45 minutes</span>
                 </li>
-                <li>
-                    <span>Cook time</span>
-                    <span>1 hour</span>
+                <li startIcon="schedule">
+                    <span class="recipe_details-category">Cook time</span>
+                    <span class="recipe_details-value">1 hour</span>
                 </li>
-                <li>
-                    <span>Total time</span>
-                    <span>7,75 hours</span>
+                <li startIcon="schedule">
+                    <span class="recipe_details-category">Total time</span>
+                    <span class="recipe_details-value">7,75 hours</span>
                 </li>
             </ul>
         </section>
 
-        <section>
+        <section id="ingredients-section">
             <h2 class="section_title">Ingredients</h2>
 
             <h3 class="section_subtitle">Graham Cracker Crust</h3>
 
-            1 and 1/2 cups (150g) <b>graham cracker crumbs</b> (about 10 full sheet graham crackers)
-            5 Tablespoons (70g) <b>unsalted butter</b>, melted
-            1/4 cup (50g) <b>granulated sugar</b>
+            <ul class="list--no-dots checklist">
+                <li>
+                    <input type="checkbox" id="graham-cracker-crust-ing-1">
+                    <label for="graham-cracker-crust-ing-1">1 and 1/2 cups (150g) <b>graham cracker crumbs</b> (about 10 full sheet graham crackers)</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="graham-cracker-crust-ing-2">
+                    <label for="graham-cracker-crust-ing-2">5 Tablespoons (70g) <b>unsalted butter</b>, melted</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="graham-cracker-crust-ing-3">
+                    <label for="graham-cracker-crust-ing-3">1/4 cup (50g) <b>granulated sugar</b></label>
+                </li>
+            </ul>
+
 
             <h3 class="section_subtitle">Cheesecake</h3>
-            four 8-ounce blocks (904g) full-fat <strong>cream cheese</strong>, softened to room temperature
-            1 cup (200g) <strong>granulated sugar</strong>
-            1 cup (240g) full-fat <strong>sour cream</strong>, at room temperature
-            1 teaspoon <strong>pure vanilla extract</strong>
-            2 teaspoons <strong>fresh lemon juice</strong> (optional, but recommended)
-            3 large <strong>eggs</strong>, at room temperature
-            topping suggestions: <i>salted caramel, lemon curd, strawberry topping, chocolate ganache, red wine chocolate ganache, fresh fruit, whipped cream, or raspberry sauce</i> (recipe in notes)
+            <ul class="list--no-dots checklist">
+                <li>
+                    <input id="cheese-cake-ing-1" type="checkbox" />
+                    <label for="cheese-cake-ing-1" >four 8-ounce blocks (904g) full-fat <strong>cream cheese</strong>, softened to room temperature</label></li>
+                <li>
+                    <input id="cheese-cake-ing-2" type="checkbox" />
+                    <label for="cheese-cake-ing-2" >1 cup (200g) <strong>granulated sugar</strong></label></li>
+                <li>
+                    <input id="cheese-cake-ing-3" type="checkbox" />
+                    <label for="cheese-cake-ing-3" >1 cup (240g) full-fat <strong>sour cream</strong>, at room temperature</label></li>
+                <li>
+                    <input id="cheese-cake-ing-4" type="checkbox" />
+                    <label for="cheese-cake-ing-4" >1 teaspoon <strong>pure vanilla extract</strong></label></li>
+                <li>
+                    <input id="cheese-cake-ing-5" type="checkbox" />
+                    <label for="cheese-cake-ing-5" >2 teaspoons <strong>fresh lemon juice</strong> (optional, but recommended)</label></li>
+                <li>
+                    <input id="cheese-cake-ing-6" type="checkbox" />
+                    <label for="cheese-cake-ing-6" >3 large <strong>eggs</strong>, at room temperature</label></li>
+                <li>
+                    <input id="cheese-cake-ing-7" type="checkbox" />
+                    <label for="cheese-cake-ing-7" >topping suggestions: <i>salted caramel, lemon curd, strawberry topping, chocolate ganache, red wine chocolate ganache, fresh fruit, whipped cream, or raspberry sauce</i> (recipe in notes)</label></li>
+            </ul>
 
         </section>
         <section id="instructions-section">
@@ -71,13 +100,12 @@
                 Source: https://sallysbakingaddiction.com/classic-cheesecake/
             </span>
         </section>
+    </div>
     </main>
 
     <footer class="credit">
         Sahithyan @ DevChallenges.io
     </footer>
-    <script>
-        //alert(window.screen.width)
-    </script>
+    <script src="./web-components/checklist.js"></script>
 </body>
 </html>
