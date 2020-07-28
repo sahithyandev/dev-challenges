@@ -1,5 +1,113 @@
 @import './../../global';
+@import './abstract/index';
+@import './base/index';
+
+:root {
+    font-size: 16px;
+}
 
 * {
     font-family: Montserrat;
+}
+
+body {
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+h1 {
+    @extend .fw-600;
+    color: #4E5150;
+    font-size: 1.5rem;
+}
+h3 {
+    @extend .fw-600;
+    color: #333333;
+    font-size: .9rem;
+}
+
+
+.price::before {
+    content: '$';
+}
+
+.items-container {
+    @extend .flex--column;
+    background-color: #F2F2F2;
+    padding: 26px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+
+    .pricing {
+        @extend .flex--column;
+        margin-top: 80px;
+        
+        .pricing-item {
+            @extend .flex;
+            padding-top: 8px;
+            margin-bottom: 8px;
+            justify-content: space-between;
+            border-top: 1px solid #BDBDBD;
+
+            span {
+                @extend .fw-600;
+                color: #333333;
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+.item {
+    @extend .grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "preview name"
+        "preview price"
+        "preview incrementor";
+    margin-bottom: 18px;
+    column-gap: 18px;
+
+    .product-preview-img {
+        border-radius: 13px;
+        width: 120px;
+        grid-area: preview;
+    }
+    .name {
+        grid-area: name;        
+    }
+    .price-container {
+        @extend .fw-600;
+        grid-area: price;
+
+        .last-price {
+            @extend .color--orange;
+            font-size: .8rem;
+        }
+        .normal-price {
+            color: #4E5150;
+            font-size: .65rem;
+        }
+    }
+    .incrementor {
+        grid-area: incrementor;
+    }
+}
+
+.input-container {
+    @extend .flex--column;
+    margin-bottom: 16px;
+    
+    input {
+        border-radius: 12px;    
+        border: 1px solid #828282;
+        padding: 12px 40px;
+    }
+
+    label {
+        @extend .fw-600;
+        font-size: .6rem;
+        color: #4F4F4F;
+    }
 }
