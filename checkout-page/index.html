@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <main>
+        <h1>Checkout</h1>
+        <section>
+        <div class="items-container">
+            <div id="item-1" class="item">
+                <img class="preview" src="./images/photo1.png" alt="photo" />
+                <div class="name">Vintage Backbag</div>
+
+                <div class="price-container">
+                    <span class="last-price price">54.99</span>
+                    <span class="normal-price price">94.99</span>
+                </div>
+                <div class="incrementor">
+                    <input type="number" value="1" />
+                </div>
+            </div>
+            <div id="item-2" class="item">
+                <img class="preview" src="./images/photo2.png" alt="photo" />
+                <div class="name">Levi Shoes</div>
+
+                <div class="price-container">
+                    <span class="last-price price">54.99</span>
+                    <span class="normal-price price">94.99</span>
+                </div>
+                <div class="incrementor">
+                    <input type="number" value="1" />
+                </div>
+            </div>
+
+            <div class="pricing">
+                <span class="">
+                    <span class="price-detail">Shipping</span>
+                    <span class="price">19</span>
+                </span>
+                <span class="">
+                    <span class="price-detail">Total</span>
+                    <span class="price">148.98</span>
+                </span>
+            </div>
+        </div>
+        </section>
+
+        <section id="contact-info">
+            <div class="input-container">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" startIcon="email" placeholder="Enter your email..." />
+            </div>
+            <div class="input-container">
+                <label for="phone">Phone</label>
+                <input type="number" id="phone" startIcon="phone" placeholder="Enter your phone..." />
+            </div>
+        </section>
+
+        <section id="shipping-info">
+            <div class="input-container">
+                <label for="name">Full name</label>
+                <input type="text" id="name" startIcon="contact" placeholder="Enter your name..." value="Rodney Cotton" />
+            </div>
+            <div class="input-container">
+                <label for="address">Address</label>
+                <input type="number" id="address" startIcon="home" placeholder="Your address..." />
+            </div>  
+            <div class="input-container">
+                <label for="city">City</label>
+                <input type="number" id="city" startIcon="phone" placeholder="Your city..." />
+            </div>
+            <div class="">
+                <div class="input-container">
+                    <label for="country">Country</label>
+                    <input type="number" id="country" startIcon="phone" placeholder="Your country..." />
+                </div>
+                <div class="input-container">
+                    <label for="postal-code">Postal Code</label>
+                    <input type="number" id="postal-code" startIcon="phone" placeholder="Your postal code..." />
+                </div>
+            </div>
+            <div>
+                <input type="checkbox" id="save-info" />
+                <label for="save-info">Save this information for next time</label>
+            </div>
+            <input type="submit" value="Continue" />
+        </section>
+    </main>
+
+    <footer class="credit">Sahithyan @ DevChallenges.io</footer>
+</body>
+</html>
