@@ -4,94 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Page</title>
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css" />
 </head>
 <body>
     <main>
         <h1>Checkout</h1>
         <section>
-        <div class="items-container">
-            <div id="item-1" class="item">
-                <img class="product-preview-img" src="./images/photo1.png" alt="photo" />
-                <div class="name">Vintage Backbag</div>
+            <div class="items-container">
+                <div id="item-1" class="item">
+                    <img class="product-preview-img" src="./images/photo1.png" alt="photo" />
+                    <div class="name">Vintage Backbag</div>
 
-                <div class="price-container">
-                    <span class="last-price price">54.99</span>
-                    <span class="normal-price price">94.99</span>
+                    <div class="price-container">
+                        <span class="last-price price">54.99</span>
+                        <span class="normal-price price">94.99</span>
+                    </div>
+                    <div class="incrementor-container">
+                        <button class="icon-container" onclick="incrementor(event)" for="vintage-backbag-count" action="remove">
+                            <span class="material-icons">remove</span>
+                        </button>
+                        <input id="vintage-backbag-count" type="number" value="1" />
+                        <button class="icon-container" onclick="incrementor(event)" for="vintage-backbag-count" action="add">
+                            <span class="material-icons">add</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="incrementor">
-                    <input type="number" value="1" />
+                <div id="item-2" class="item">
+                    <img class="product-preview-img" src="./images/photo2.png" alt="photo" />
+                    <div class="name">Levi Shoes</div>
+                    
+                    <div class="price-container">
+                        <span class="last-price price">74.99</span>
+                        <span class="normal-price price">124.99</span>
+                    </div>
+                    <div class="incrementor-container">
+                        <button class="icon-container" onclick="incrementor(event)" for="levi-shoes-count" action="remove">
+                            <span class="material-icons">remove</span>
+                        </button>
+                        <input id="levi-shoes-count" type="number" value="1" />
+                        <button class="icon-container" onclick="incrementor(event)" for="levi-shoes-count" action="add">
+                            <span class="material-icons">add</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pricing">
+                    <span class="pricing-item">
+                        <span class="price-detail">Shipping</span>
+                        <span class="price">19</span>
+                    </span>
+                    <span class="pricing-item">
+                        <span class="price-detail">Total</span>
+                        <span class="price">148.98</span>
+                    </span>
                 </div>
             </div>
-            <div id="item-2" class="item">
-                <img class="product-preview-img" src="./images/photo2.png" alt="photo" />
-                <div class="name">Levi Shoes</div>
-
-                <div class="price-container">
-                    <span class="last-price price">54.99</span>
-                    <span class="normal-price price">94.99</span>
-                </div>
-                <div class="incrementor">
-                    <input type="number" value="1" />
-                </div>
-            </div>
-
-            <div class="pricing">
-                <span class="pricing-item">
-                    <span class="price-detail">Shipping</span>
-                    <span class="price">19</span>
-                </span>
-                <span class="pricing-item">
-                    <span class="price-detail">Total</span>
-                    <span class="price">148.98</span>
-                </span>
-            </div>
-        </div>
         </section>
 
-        <section id="contact-info">
-            <h3>Contact Information</h3>
-            <div class="input-container">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" startIcon="email" placeholder="Enter your email..." />
-            </div>
-            <div class="input-container">
-                <label for="phone">Phone</label>
-                <input type="number" id="phone" startIcon="phone" placeholder="Enter your phone..." />
-            </div>
-        </section>
+        <form id="info">
+            <section id="contact-info">
+                <h3>Contact Information</h3>
+                <input-wc label="E-mail" placeholder="Enter your email" type="email" startIcon="email"></input-wc>
+                <input-wc label="Phone" placeholder="Enter your phone..." startIcon="phone"></input-wc>
+            </section>
 
-        <section id="shipping-info">
-            <div class="input-container">
-                <label for="name">Full name</label>
-                <input type="text" id="name" startIcon="contact" placeholder="Enter your name..." value="Rodney Cotton" />
-            </div>
-            <div class="input-container">
-                <label for="address">Address</label>
-                <input type="number" id="address" startIcon="home" placeholder="Your address..." />
-            </div>  
-            <div class="input-container">
-                <label for="city">City</label>
-                <input type="number" id="city" startIcon="phone" placeholder="Your city..." />
-            </div>
-            <div class="">
-                <div class="input-container">
-                    <label for="country">Country</label>
-                    <input type="number" id="country" startIcon="phone" placeholder="Your country..." />
+            <section id="shipping-info">
+                <h3>Shipping Address</h3>
+                <input-wc label="Full name" placeholder="Enter your name..." value="Rodney Cotton" startIcon="account_circle" ></input-wc>
+                <input-wc label="Address" placeholder="Your address..." startIcon="home"></input-wc>
+                <input-wc label="City" placeholder="Your city..." startIcon="apartment"></input-wc>
+                <div class="side-inputs">
+                    <input-wc label="Country" placeholder="Your country..." startIcon="apartment" fullWidth="false"></input-wc>
+                    <input-wc label="Postal Code" placeholder="Your postal code..." startIcon="markunread_mailbox" fullWidth="false"></input-wc>
                 </div>
-                <div class="input-container">
-                    <label for="postal-code">Postal Code</label>
-                    <input type="number" id="postal-code" startIcon="phone" placeholder="Your postal code..." />
+                <div id="save-info-container">
+                    <input type="checkbox" id="save-info-input" />
+                    <label for="save-info-input" id="save-info-label">Save this information for next time</label>
                 </div>
-            </div>
-            <div>
-                <input type="checkbox" id="save-info" />
-                <label for="save-info">Save this information for next time</label>
-            </div>
-            <input type="submit" value="Continue" />
-        </section>
+            </section>
+            <input type="submit" value="Continue" class="button" />
+        </form>
     </main>
 
     <footer class="credit">Sahithyan @ DevChallenges.io</footer>
+
+    <script src="./script.js"></script>
+
+    <script src="./web-components/input-component.js" ></script>
 </body>
 </html>

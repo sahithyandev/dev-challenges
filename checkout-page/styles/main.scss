@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import './../../global';
 @import './abstract/index';
 @import './base/index';
+@import './components/index';
 
 :root {
     font-size: 16px;
@@ -13,22 +15,27 @@
 body {
     padding-right: 12px;
     padding-left: 12px;
+    overflow-x: hidden;
+    // background-color: blue;
 }
 
 h1 {
     @extend .fw-600;
     color: #4E5150;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 h3 {
     @extend .fw-600;
     color: #333333;
-    font-size: .9rem;
+    font-size: 1.3rem;
 }
-
 
 .price::before {
     content: '$';
+}
+
+.material-icons {
+    // pointer-events: fill;
 }
 
 .items-container {
@@ -60,7 +67,7 @@ h3 {
 
 .item {
     @extend .grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: min-content auto;
     grid-template-rows: auto auto auto;
     grid-template-areas:
         "preview name"
@@ -88,26 +95,81 @@ h3 {
         .normal-price {
             color: #4E5150;
             font-size: .65rem;
+            text-decoration: line-through;
         }
     }
-    .incrementor {
+    .incrementor-container {
+        @extend .flex;
         grid-area: incrementor;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        border: 1px solid black;
+        border-radius: 12px;
+        padding: 14px 6px;
+        box-sizing: border-box;
+        height: 50px;
+
+        input {
+            width: 40px;
+            color: #333333;
+            background: none;
+            border: none
+        }
+
+        .icon-container {
+            background-color: #E0E0E0;
+            // remove button styles
+            @extend .btn-reset;
+            .material-icons {
+                font-size: 1rem;
+                color: #828282;
+            }
+        }
     }
 }
 
-.input-container {
+// form
+#info {
     @extend .flex--column;
-    margin-bottom: 16px;
-    
-    input {
-        border-radius: 12px;    
-        border: 1px solid #828282;
-        padding: 12px 40px;
-    }
+    align-items: flex-end;
+}
+#contact-info, #shipping-info {
+    width: 100%;
+}
 
-    label {
-        @extend .fw-600;
-        font-size: .6rem;
-        color: #4F4F4F;
+.side-inputs {
+    @extend .grid;
+    // background-color: red;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 10px;
+}
+
+
+#save-info-container {
+    @extend .flex;
+    align-items: center;
+
+    #save-info-input {
+        margin-right: 8px;
     }
+    
+    #save-info-label {
+        @extend .fw-600;        
+        color: #4F4F4F;
+        font-size: .7rem;
+    }    
+}
+
+// submit button
+.button {
+    @extend .fw-600;
+    background-color: #F2994A;
+    color: white;
+    padding: 17px 45px;
+    border: none;
+    border-radius: 12px;
+    width: fit-content; 
+    font-family: Montserrat;   
+    font-style: 1rem;
 }

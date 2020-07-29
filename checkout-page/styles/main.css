@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 .credit {
   font-size: .7rem;
   text-align: center;
@@ -5,30 +6,54 @@
   margin-bottom: 20px;
 }
 
-.flex, .flex--column, .items-container, .items-container .pricing, .input-container, .items-container .pricing .pricing-item {
+.flex, .flex--column, .items-container, .items-container .pricing, #info, .items-container .pricing .pricing-item, .item .incrementor-container, #save-info-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.flex--column, .items-container, .items-container .pricing, .input-container {
+.flex--column, .items-container, .items-container .pricing, #info {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.grid, .item {
+.grid, .item, .side-inputs {
   display: -ms-grid;
   display: grid;
+}
+
+.btn-reset, .item .incrementor-container .icon-container {
+  border: none;
 }
 
 .color--orange, .item .price-container .last-price {
   color: #F2994A;
 }
 
-.fw-600, h1, h3, .items-container .pricing .pricing-item span, .item .price-container, .input-container label {
+.fw-600, h1, h3, .items-container .pricing .pricing-item span, .item .price-container, #save-info-container #save-info-label, .button {
   font-weight: 600;
+}
+
+input-wc {
+  --default-border-color: #828282;
+  --default-label-color: #4F4F4F;
+  --default-border-width: 1px;
+  --default-background-color: #00000000;
+  --default-helper-text-color: #828282;
+  --border-radius: 12px;
+  --padding: 12px 12px 12px 36px;
+  --label-font-size: .75rem;
+  --icon-color: #828282;
+  --input-font-size: .9rem;
+  --margin-bottom: 16px;
+  --focus-border-width: 2px;
+  --border-color: var(--default-border-color);
+  --label-color: var(--default-label-color);
+  --border-width: var(--default-border-width);
+  --background-color: var(--default-background-color);
+  --helper-text-color: var(--default-helper-text-color);
 }
 
 :root {
@@ -42,16 +67,17 @@
 body {
   padding-right: 12px;
   padding-left: 12px;
+  overflow-x: hidden;
 }
 
 h1 {
   color: #4E5150;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 h3 {
   color: #333333;
-  font-size: .9rem;
+  font-size: 1.3rem;
 }
 
 .price::before {
@@ -84,8 +110,9 @@ h3 {
 }
 
 .item {
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  -ms-grid-columns: min-content auto;
+      grid-template-columns: -webkit-min-content auto;
+      grid-template-columns: min-content auto;
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
       grid-template-areas: "preview name" "preview price" "preview incrementor";
@@ -122,25 +149,85 @@ h3 {
 .item .price-container .normal-price {
   color: #4E5150;
   font-size: .65rem;
+  text-decoration: line-through;
 }
 
-.item .incrementor {
+.item .incrementor-container {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: incrementor;
-}
-
-.input-container {
-  margin-bottom: 16px;
-}
-
-.input-container input {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  border: 1px solid black;
   border-radius: 12px;
-  border: 1px solid #828282;
-  padding: 12px 40px;
+  padding: 14px 6px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 50px;
 }
 
-.input-container label {
-  font-size: .6rem;
+.item .incrementor-container input {
+  width: 40px;
+  color: #333333;
+  background: none;
+  border: none;
+}
+
+.item .incrementor-container .icon-container {
+  background-color: #E0E0E0;
+}
+
+.item .incrementor-container .icon-container .material-icons {
+  font-size: 1rem;
+  color: #828282;
+}
+
+#info {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#contact-info, #shipping-info {
+  width: 100%;
+}
+
+.side-inputs {
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+#save-info-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#save-info-container #save-info-input {
+  margin-right: 8px;
+}
+
+#save-info-container #save-info-label {
   color: #4F4F4F;
+  font-size: .7rem;
+}
+
+.button {
+  background-color: #F2994A;
+  color: white;
+  padding: 17px 45px;
+  border: none;
+  border-radius: 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: Montserrat;
+  font-style: 1rem;
 }
