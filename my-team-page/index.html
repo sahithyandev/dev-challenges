@@ -1,95 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1,
   maximum-scale=5"
-    />
+        />
 
-    <link rel="icon" href="devchallenges.png" />
+        <link rel="icon" href="devchallenges.png" />
 
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="https://devchallenges.io/"
+        />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+        <link rel="stylesheet" href="./style/main.css" />
 
-    <title>Devchallenges</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=PT+Serif:wght@400;700&family=Montserrat:wght@600&display=swap"
+            rel="stylesheet"
+        />
 
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
+        <title>My Team</title>
+    </head>
+    <body>
+        <header>
+            <h2 class="pt-serif-700 top-heading">The creative crew</h2>
 
-      ul {
-        padding-left: 24px;
-      }
+            <div>
+                <h6 class="uppercase">who we are</h6>
+                <p class="poppins-400 team-description">
+                    We are team of creatively diverse. driven. innovative
+                    individuals working in various locations from the world.
+                </p>
+            </div>
+        </header>
 
-      li {
-        margin-bottom: 8px;
-      }
+        <main id="team-members-container">
+            <div class="team-member-card">
+                <img
+                    class="team-member--image"
+                    src="./assets/images/photo1.png"
+                    alt="person-1"
+                />
+                <h4 class="team-member--name">Bill Mahoney</h4>
+                <div class="team-member--position">product owner</div>
+            </div>
 
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
+            <div class="team-member-card">
+                <img
+                    class="team-member--image"
+                    src="./assets/images/photo2.png"
+                    alt="person-1"
+                />
+                <h4 class="team-member--name">Saba Cabrera</h4>
+                <div class="team-member--position">art director</div>
+            </div>
 
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
+            <div class="team-member-card">
+                <img
+                    class="team-member--image"
+                    src="./assets/images/photo3.png"
+                    alt="person-1"
+                />
+                <h4 class="team-member--name">Shae Le</h4>
+                <div class="team-member--position">tech lead</div>
+            </div>
 
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
+            <div class="team-member-card">
+                <img
+                    class="team-member--image"
+                    src="./assets/images/photo4.png"
+                    alt="person-1"
+                />
+                <h4 class="team-member--name">Skylah Lu</h4>
+                <div class="team-member--position">UX designer</div>
+            </div>
 
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
+            <div class="team-member-card">
+                <img
+                    class="team-member--image"
+                    src="./assets/images/photo5.png"
+                    alt="person-1"
+                />
+                <h4 class="team-member--name">Griff Richards</h4>
+                <div class="team-member--position">Developer</div>
+            </div>
 
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
+            <div class="team-member-card">
+                <img
+                    class="team-member--image"
+                    src="./assets/images/photo6.png"
+                    alt="person-1"
+                />
+                <h4 class="team-member--name">Stan John</h4>
+                <div class="team-member--position">Developer</div>
+            </div>
+        </main>
 
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
-      </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
-    </div>
-  </body>
+        <footer class="montserrat-600 credit">
+            Sahithyan @ DevChallenges.io
+        </footer>
+    </body>
 </html>

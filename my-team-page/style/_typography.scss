@@ -1,0 +1,31 @@
+.pt-serif {
+    font-family: "PT Serif";
+}
+.poppins {
+    font-family: "Poppins";
+}
+.montserrat {
+    font-family: "Montserrat";
+}
+
+.pt-serif-400 {
+    @extend .pt-serif;
+    font-weight: 400;
+}
+.pt-serif-700 {
+    @extend .pt-serif;
+    font-weight: 700;
+}
+.poppins-600 {
+    @extend .poppins;
+    font-weight: 600;
+}
+.poppins-400 {
+    @extend .poppins;
+    font-weight: 400;
+}
+
+.montserrat-600 {
+    @extend .montserrat;
+    font-weight: 600;
+}

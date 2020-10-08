@@ -1,0 +1,203 @@
+.uppercase, .team-member-card .team-member--position {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase, .team-member-card .team-member--position {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+h6 {
+  font-size: 1.1rem;
+  line-height: 27px;
+  letter-spacing: 0em;
+  margin-bottom: 10px;
+}
+
+.uppercase, .team-member-card .team-member--position {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.pt-serif, .pt-serif-400, .team-member-card .team-member--position, .pt-serif-700 {
+  font-family: "PT Serif";
+}
+
+.poppins, .poppins-600, h6, .team-member-card .team-member--name, .poppins-400 {
+  font-family: "Poppins";
+}
+
+.montserrat, .montserrat-600 {
+  font-family: "Montserrat";
+}
+
+.pt-serif-400, .team-member-card .team-member--position {
+  font-weight: 400;
+}
+
+.pt-serif-700 {
+  font-weight: 700;
+}
+
+.poppins-600, h6, .team-member-card .team-member--name {
+  font-weight: 600;
+}
+
+.poppins-400 {
+  font-weight: 400;
+}
+
+.montserrat-600 {
+  font-weight: 600;
+}
+
+.team-member-card {
+  position: relative;
+}
+
+.team-member-card .team-member--image {
+  height: auto;
+  width: 20vw;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 750px) {
+  .team-member-card .team-member--image {
+    width: 38vw;
+  }
+}
+
+.team-member-card .team-member--name {
+  margin-top: 0;
+}
+
+.team-member-card .team-member--position {
+  --offset-from-picture: 10px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  line-height: 1em;
+  font-size: 1em;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: rotate(90deg) translate(-0.8em, calc(-1 * var(--offset-from-picture)));
+          transform: rotate(90deg) translate(-0.8em, calc(-1 * var(--offset-from-picture)));
+}
+
+@media (max-width: 750px) {
+  .team-member-card .team-member--position {
+    font-size: 0.8em;
+    --offset-from-picture: 3px;
+  }
+}
+
+body {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 25px 100px;
+}
+
+@media (max-width: 750px) {
+  body {
+    padding: 25px;
+  }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (max-width: 750px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+header .top-heading {
+  font-size: 2.25rem;
+  line-height: 48px;
+  letter-spacing: -0.045em;
+}
+
+@media (max-width: 750px) {
+  header .top-heading {
+    margin: 0px;
+  }
+}
+
+header .team-description {
+  font-size: 1.1em;
+  max-width: 400px;
+}
+
+@media (max-width: 750px) {
+  header .team-description {
+    font-size: 0.9em;
+  }
+}
+
+main#team-members-container {
+  margin-top: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 100px;
+          column-gap: 100px;
+}
+
+@media (max-width: 750px) {
+  main#team-members-container {
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  main#team-members-container .team-member-card:nth-child(2),
+  main#team-members-container .team-member-card:nth-child(4),
+  main#team-members-container .team-member-card:nth-child(6) {
+    margin-top: 80px;
+  }
+  main#team-members-container .team-member-card:nth-child(5) {
+    margin-top: 0px !important;
+  }
+}
+
+main#team-members-container .team-member-card:nth-child(2),
+main#team-members-container .team-member-card:nth-child(5) {
+  margin-top: 80px;
+}
+
+.credit {
+  font-size: 0.9em;
+  line-height: 17px;
+  letter-spacing: 0;
+  color: #a9a9a9;
+  text-align: center;
+  margin: 40px 0 0px;
+}

@@ -1,0 +1,42 @@
+@import "./../atomic";
+@import "./../typography";
+
+.team-member-card {
+    position: relative;
+    // width: 40%;
+    .team-member--image {
+        height: auto;
+        width: 20vw;
+        margin-bottom: 12px;
+
+        @include mobile {
+            width: 38vw;
+        }
+    }
+    .team-member--name {
+        @extend .poppins-600;
+        margin-top: 0;
+    }
+    .team-member--position {
+        @extend .pt-serif-400, .uppercase;
+        --offset-from-picture: 10px; // offset from image
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: max-content;
+        line-height: 1em;
+        font-size: 1em;
+
+        // transform-origin: 0 50%;
+        transform-origin: 0 100%;
+        // transform-origin: 0 0;
+
+        @include mobile {
+            font-size: 0.8em;
+            --offset-from-picture: 3px;
+        }
+
+        transform: rotate(90deg)
+            translate(-0.8em, calc(-1 * var(--offset-from-picture)));
+    }
+}
