@@ -1,12 +1,15 @@
 .project-card {
     // background-color: rgb(197, 190, 190);
-    @include mobile {
+    width: 46%;
+    @include tab_mobile {
         width: 100%;
     }
     .project-image {
         border-radius: 12px;
-        width: 530px;
-        height: 530px;
+        height: auto;
+        width: 100%;
+        // width: 530px;
+        // height: 530px;
 
         @include mobile {
             height: auto;
