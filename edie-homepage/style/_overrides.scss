@@ -1,0 +1,68 @@
+@import "./media-queries";
+
+h1 {
+    font-family: Poppins;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 8px 0px;
+    max-width: 520px;
+
+    @include mobile {
+        max-width: 72%;
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+h2 {
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 8px 0px;
+    max-width: 450px;
+
+    @include mobile {
+        font-size: 24px;
+        line-height: 36px;
+        max-width: 72%;
+        // background-color: red;
+    }
+}
+
+p {
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4f4f4f;
+
+    @include mobile {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+section {
+    margin-bottom: 100px !important;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

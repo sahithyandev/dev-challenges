@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1,
+            maximum-scale=5"
+        />
+
+        <link rel="icon" href="devchallenges.png" />
+
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="https://devchallenges.io/"
+        />
+        <link rel="stylesheet" href="./style/main.css" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Heebo:wght@800&family=Montserrat:wght@600&family=Poppins:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Edie Homepage | Dev Challenges</title>
+    </head>
+
+    <body>
+        <nav id="nav" nav-toggled="false">
+            <div class="brand-name">Edie</div>
+
+            <div id="nav-icon">
+                <!-- CSS's content is used to set this icon -->
+                <!-- <i class="material-icons">menu</i> -->
+            </div>
+
+            <div id="nav-links-container">
+                <div class="nav-link"><a href="#">home</a></div>
+                <div class="nav-link"><a href="#services">services</a></div>
+                <div class="nav-link"><a href="#our-work">our works</a></div>
+                <div class="nav-link"><a href="#clients">clients</a></div>
+                <div class="nav-link"><a href="#contact">contact</a></div>
+            </div>
+        </nav>
+
+        <main>
+            <section id="hero-section">
+                <div class="message-tag">Unhappy with your website?</div>
+                <h1>We create beautiful and fast web services</h1>
+                <img
+                    src="./assets/heroImage.jpg"
+                    id="hero-image"
+                    alt="hero image"
+                />
+                <h1>Story, emotion and purpose</h1>
+                <p>
+                    We help transform your ideas into real world applications
+                    that will outperform your toughest competition and help you
+                    achieve your strategic goals in short period of time.
+                </p>
+
+                <div class="get-in-touch">
+                    <label for="email-1">Want us to contact you?</label>
+                    <input type="email" id="email-1" placeholder="Email" />
+                    <button>Join</button>
+                </div>
+            </section>
+
+            <section id="services">
+                <h2>We offer high demand services</h2>
+
+                <div id="services-container">
+                    <div class="service-card" style="--color: #2d9cdb">
+                        <div class="icon-container">
+                            <i class="material-icons">create</i>
+                        </div>
+                        <h4 class="service-title">UI/UX Design</h4>
+                        <p class="service-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Duis a metus ac nulla consequat aliquet id
+                            quis turpis.
+                        </p>
+                        <button class="get-started">Get started</button>
+                    </div>
+
+                    <div class="service-card" style="--color: #27ae60">
+                        <div class="icon-container">
+                            <i class="material-icons">code</i>
+                        </div>
+                        <h4 class="service-title">Front End</h4>
+                        <p class="service-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Duis a metus ac nulla consequat aliquet id
+                            quis turpis.
+                        </p>
+                        <button class="get-started">Get started</button>
+                    </div>
+
+                    <div class="service-card" style="--color: #2d9cdb">
+                        <div class="icon-container">
+                            <i class="material-icons">storage</i>
+                        </div>
+                        <h4 class="service-title">Back End</h4>
+                        <p class="service-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Duis a metus ac nulla consequat aliquet id
+                            quis turpis.
+                        </p>
+                        <button class="get-started">Get started</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="our-work">
+                <h2>Good design means good business</h2>
+
+                <div id="project-gallery">
+                    <div class="project-card">
+                        <img
+                            src="./assets/smarthome.jpg"
+                            class="project-image"
+                            alt="smarthome"
+                        />
+                        <div class="project-type">Full stack application</div>
+                        <div class="project-name">Smart home dashboard</div>
+                    </div>
+                    <div class="project-card">
+                        <img
+                            src="./assets/booking.png"
+                            class="project-image"
+                            alt="booking"
+                        />
+                        <div class="project-type">Mobile application</div>
+                        <div class="project-name">Booking system</div>
+                    </div>
+
+                    <div class="project-card">
+                        <img
+                            src="./assets/onboard.png"
+                            class="project-image"
+                            alt="onboard"
+                        />
+                        <div class="project-type">UX/UI design</div>
+                        <div class="project-name">Onboard application</div>
+                    </div>
+
+                    <div class="project-card">
+                        <img
+                            src="./assets/juice-product.png"
+                            class="project-image"
+                            alt="juice-product"
+                        />
+                        <div class="project-type">Front End application</div>
+                        <div class="project-name">Juice product homepage</div>
+                    </div>
+                    <a href="" class="message-tag" style="align-self: flex-end">
+                        see more
+                        <i style="vertical-align: middle" class="material-icons"
+                            >arrow_right_alt</i
+                        >
+                    </a>
+                </div>
+            </section>
+
+            <section id="team" class="flex">
+                <div>
+                    <div class="message-tag" style="color: #eb5757">
+                        Meet the team
+                    </div>
+                    <h2>We are chilled and a laidback team</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+
+                <div id="team-people-container">
+                    <img
+                        src="./assets/person3.png"
+                        class="team-person person-icon"
+                        alt=""
+                        id="person-1"
+                    />
+
+                    <img
+                        src="./assets/person1.png"
+                        class="team-person person-icon"
+                        alt=""
+                        id="person-2"
+                    />
+                    <img
+                        src="./assets/person2.png"
+                        class="team-person person-icon"
+                        alt=""
+                        id="person-3"
+                    />
+                </div>
+            </section>
+
+            <section id="clients">
+                <h2>
+                    “Fast and outstanding resutls. Edie understands their
+                    customer’s needs. They have a young and talented team.”
+                </h2>
+
+                <div class="person-card">
+                    <img
+                        src="./assets/person4.png"
+                        class="person-icon__small"
+                        style="grid-area: icon"
+                        alt="person-icon-4"
+                    />
+                    <span class="person-name" style="grid-area: name">
+                        Carlos Tran
+                    </span>
+                    <span class="person-tag" style="grid-area: tag"
+                        >The Decorate Gatsby</span
+                    >
+                </div>
+            </section>
+        </main>
+    </body>
+    <footer id="contact">
+        <div id="nav-links-container">
+            <div class="nav-link"><a href="#">home</a></div>
+            <div class="nav-link"><a href="#services">services</a></div>
+            <div class="nav-link"><a href="#our-work">our works</a></div>
+            <div class="nav-link"><a href="#clients">clients</a></div>
+            <div class="nav-link"><a href="#contact">contact</a></div>
+        </div>
+        <div id="brand-links">
+            <div class="brand-name">Edie</div>
+            <div id="links-container">
+                <img
+                    class="link-icon"
+                    src="./assets/icons/instagram.svg"
+                    alt="instagram icon"
+                />
+                <img
+                    class="link-icon"
+                    src="./assets/icons/linkedin.svg"
+                    alt="linkedin icon"
+                />
+                <img
+                    class="link-icon"
+                    src="./assets/icons/twitter.svg"
+                    alt="twitter icon"
+                />
+            </div>
+        </div>
+
+        <div class="get-in-touch">
+            <label for="email">Want us to contact you?</label>
+            <input type="email" id="email" placeholder="Email" />
+            <button>Join</button>
+        </div>
+
+        <div id="credit">Sahithyan @ DevChallenges.io</div>
+    </footer>
+
+    <script>
+        let navIcon = document.getElementById("nav-icon");
+        navIcon.onclick = () => {
+            let nav = document.getElementById("nav");
+            const navToggledAttributeName = "nav-toggled";
+            // to convert the string to boolean, I am using this technique
+            let newValue = nav.getAttribute(navToggledAttributeName) != "true";
+            nav.setAttribute(navToggledAttributeName, newValue);
+        };
+    </script>
+</html>

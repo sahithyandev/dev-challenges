@@ -1,0 +1,420 @@
+@import "./abstracts";
+@import "./overrides";
+@import "./media-queries";
+@import "./components/service-card";
+@import "./components/person";
+@import "./components/project-card";
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 40px;
+    // width: 100vw !important;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    position: relative;
+    padding: 0 5%;
+    margin: auto;
+    margin-top: 28px;
+}
+
+html,
+body {
+    @include mobile {
+        overflow-x: hidden;
+    }
+}
+
+.brand-name {
+    font-family: Heebo !important;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 53px;
+    letter-spacing: 0em;
+}
+
+#nav-icon {
+    display: none;
+    @include mobile {
+        display: block;
+    }
+
+    &::before {
+        content: "menu";
+        font-family: "Material Icons";
+        font-size: 24px;
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.25s ease;
+
+    #nav-links-container {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+
+        @include mobile {
+            background-color: red;
+            position: absolute;
+            padding: 20px 0;
+            text-align: center;
+            left: 0;
+            transform: translateX(100vw);
+            // opacity: 0;
+            width: 100vw;
+            top: 90px;
+            // background-color: rgb(218, 218, 218);
+            display: block !important;
+            transition: all 0.25s ease;
+        }
+
+        .nav-link {
+            font-weight: 500;
+        }
+    }
+}
+
+nav[nav-toggled="true"] {
+    #nav-icon::before {
+        content: "close";
+    }
+    #nav-links-container {
+        // display: block;
+        transform: translateX(0vw);
+    }
+}
+
+.nav-link {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 36px;
+    letter-spacing: 0em;
+}
+
+.message-tag {
+    color: $primary-blue;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    @include mobile {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+#hero-section {
+    width: 100%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 200px;
+    // background-color: rgb(245, 245, 245);
+    display: grid;
+    height: max-content;
+
+    @include mobile {
+        margin-top: 48px;
+    }
+
+    #hero-image {
+        width: 100%;
+        margin-bottom: 42px;
+        border-radius: 18px;
+    }
+
+    :not(#hero-image) {
+        margin-left: 255px;
+
+        @include mobile {
+            margin-left: 20px;
+        }
+    }
+
+    p {
+        max-width: 400px;
+
+        @include mobile {
+            max-width: 100%;
+            width: 320px;
+        }
+    }
+
+    .get-in-touch {
+        * {
+            margin-left: 0 !important;
+        }
+        input {
+            background: #f2f2f2;
+        }
+    }
+}
+
+#services,
+#our-work,
+#team,
+#clients {
+    width: 88%;
+    margin: auto;
+
+    @include mobile {
+        width: 98%;
+    }
+}
+
+#services-container {
+    @extend .flex;
+    gap: 16px;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+#clients {
+    @include mobile {
+        // background-color: red;
+        margin-bottom: 120px !important;
+    }
+    h2 {
+        max-width: 1000px;
+        @include mobile {
+            margin-bottom: 20px;
+        }
+    }
+
+    .person-card {
+        // background-color: red;
+        width: 280px;
+        column-gap: 18px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "icon name"
+            "icon tag";
+    }
+}
+
+#project-gallery {
+    @extend .flex--column;
+    flex-wrap: wrap;
+    row-gap: 120px;
+    column-gap: 18px;
+    // background-color: rgb(233, 224, 224);
+    height: 1600px;
+    // width: 1200px;
+    width: 100%;
+
+    align-items: center;
+    @include mobile {
+        row-gap: 20px;
+        margin-top: 40px;
+        align-items: left;
+        width: 100%;
+        flex-wrap: nowrap;
+        height: fit-content;
+    }
+
+    .project-card:first-child {
+        margin-top: 200px;
+
+        @include mobile {
+            margin-top: 0;
+        }
+    }
+}
+
+#team {
+    @extend .flex;
+    max-height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    // margin-top: 100px;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    .message-tag {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 27px;
+    }
+
+    h2 {
+        max-width: 49%;
+    }
+    p {
+        max-width: 60%;
+    }
+}
+
+#team-people-container {
+    @extend .flex--column;
+    flex-wrap: wrap;
+    width: 480px;
+    height: 520px;
+    gap: 16px;
+    // background-color: blue;
+
+    @include mobile {
+        gap: 6px;
+        width: 100%;
+        align-items: center;
+        height: 400px;
+        // background-color: red;
+    }
+
+    img {
+        width: 240px;
+        height: auto;
+
+        @include mobile {
+            width: 48%;
+            // transform: scale(0.8);
+        }
+    }
+    .team-person:first-child {
+        margin-top: 100px;
+    }
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    display: grid;
+    // grid-template-columns: repeat(3, auto);
+    grid-template-columns: 20% 30% 30%;
+    grid-template-rows: auto 20px auto;
+    grid-template-areas:
+        "links brand get-contact"
+        ". . ."
+        "credit credit credit";
+    justify-content: center;
+
+    color: white;
+    background-color: #100e1d;
+    padding: 28px 5vw;
+
+    @include mobile {
+        padding: 28px 40px;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "links"
+            "brand"
+            "get-contact"
+            "credit";
+        row-gap: 40px;
+    }
+
+    #nav-links-container {
+        grid-area: links;
+        .nav-link {
+            font-weight: 400;
+            letter-spacing: 0em;
+        }
+    }
+
+    #brand-links {
+        grid-area: brand;
+        #brand-name {
+            margin-bottom: 8px;
+        }
+        #links-container {
+            display: inline-flex;
+            gap: 10px;
+        }
+    }
+
+    #credit {
+        grid-area: credit;
+        text-align: center;
+        font-family: Montserrat;
+
+        @include mobile {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 17px;
+            letter-spacing: 0em;
+        }
+    }
+
+    .get-in-touch {
+        grid-area: get-contact;
+        margin-bottom: 60px;
+
+        @include mobile {
+            width: 110%;
+            align-self: center;
+        }
+    }
+}
+
+.get-in-touch {
+    --total-height: 60px;
+    // width: 120px;
+    width: fit-content;
+    // background-color: red;
+    // height: var(--total-height);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+
+    @include mobile {
+        width: 100%;
+    }
+
+    label {
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    input,
+    button {
+        border-radius: 12px;
+        border: none;
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 17px;
+    }
+
+    input {
+        grid-column: 1;
+        width: 110%;
+        padding: 14px 20px;
+        // background-color: red !important;
+    }
+
+    button {
+        --button-padding: 4px;
+        // height: 100%;
+        background-color: $primary-blue;
+        color: white;
+        position: relative;
+        left: -18%;
+        // right: calc(1 * (100% + var(--button-padding)));
+        padding: 0 28px;
+        height: calc(var(--total-height) - calc(3 * var(--button-padding)));
+
+        @include mobile {
+            left: -30%;
+        }
+    }
+}

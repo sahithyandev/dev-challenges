@@ -1,0 +1,37 @@
+.project-card {
+    // background-color: rgb(197, 190, 190);
+    @include mobile {
+        width: 100%;
+    }
+    .project-image {
+        border-radius: 12px;
+        width: 530px;
+        height: 530px;
+
+        @include mobile {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .project-type,
+    .project-name {
+        font-family: Poppins;
+        letter-spacing: 0em;
+        width: fit-content;
+    }
+
+    .project-type {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 21px;
+        color: #828282;
+    }
+
+    .project-name {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px;
+        color: #333333;
+    }
+}
