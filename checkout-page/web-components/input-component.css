@@ -3,8 +3,12 @@
   color: #F2994A;
 }
 
-.fw-600, #input-element .label, #input-element div .input {
+.fw-600, .montserrat-600, #input-element .label, #input-element div .input {
   font-weight: 600;
+}
+
+.montserrat, .montserrat-600, #input-element {
+  font-family: "Montserrat";
 }
 
 .flex, .flex--column, #input-element {
@@ -25,12 +29,7 @@
   display: grid;
 }
 
-.btn-reset {
-  border: none;
-}
-
 #input-element {
-  font-family: "Montserrat";
   width: 100%;
   position: relative;
   margin-bottom: var(--margin-bottom);
@@ -68,13 +67,19 @@
   --height: 20px;
   font-size: var(--height);
   position: absolute;
-  bottom: calc(50% - var(--height)/2);
-  left: 2vw;
+  bottom: calc(50% - var(--height) / 2);
+  left: 12px;
   color: var(--icon-color);
 }
 
 #input-element #start-icon ~ input {
-  padding-left: calc(2% + 30px);
+  padding-left: calc(3% + 30px);
+}
+
+@media (min-width: 900px) {
+  #input-element #start-icon ~ input {
+    padding-left: 38px;
+  }
 }
 
 #input-element #end-icon {

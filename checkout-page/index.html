@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout Page</title>
-    <link rel="stylesheet" href="./styles/main.css" />
-</head>
-<body>
-    <main>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Checkout Page</title>
+        <link rel="stylesheet" href="./styles/main.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
         <h1>Checkout</h1>
-        <section>
+        <main>
             <div class="items-container">
                 <div id="item-1" class="item">
-                    <img class="product-preview-img" src="./images/photo1.png" alt="photo" />
+                    <img
+                        class="product-preview-img"
+                        src="./images/photo1.png"
+                        alt="photo"
+                    />
                     <div class="name">Vintage Backbag</div>
 
                     <div class="price-container">
@@ -20,29 +31,57 @@
                         <span class="normal-price price">94.99</span>
                     </div>
                     <div class="incrementor-container">
-                        <button class="icon-container" onclick="incrementor(event)" for="vintage-backbag-count" action="remove">
+                        <button
+                            class="icon-container"
+                            onclick="incrementor(event)"
+                            for="vintage-backbag-count"
+                            action="remove"
+                        >
                             <span class="material-icons">remove</span>
                         </button>
-                        <input id="vintage-backbag-count" type="number" value="1" />
-                        <button class="icon-container" onclick="incrementor(event)" for="vintage-backbag-count" action="add">
+                        <input
+                            id="vintage-backbag-count"
+                            type="number"
+                            value="1"
+                        />
+                        <button
+                            class="icon-container"
+                            onclick="incrementor(event)"
+                            for="vintage-backbag-count"
+                            action="add"
+                        >
                             <span class="material-icons">add</span>
                         </button>
                     </div>
                 </div>
                 <div id="item-2" class="item">
-                    <img class="product-preview-img" src="./images/photo2.png" alt="photo" />
+                    <img
+                        class="product-preview-img"
+                        src="./images/photo2.png"
+                        alt="photo"
+                    />
                     <div class="name">Levi Shoes</div>
-                    
+
                     <div class="price-container">
                         <span class="last-price price">74.99</span>
                         <span class="normal-price price">124.99</span>
                     </div>
                     <div class="incrementor-container">
-                        <button class="icon-container" onclick="incrementor(event)" for="levi-shoes-count" action="remove">
+                        <button
+                            class="icon-container"
+                            onclick="incrementor(event)"
+                            for="levi-shoes-count"
+                            action="remove"
+                        >
                             <span class="material-icons">remove</span>
                         </button>
                         <input id="levi-shoes-count" type="number" value="1" />
-                        <button class="icon-container" onclick="incrementor(event)" for="levi-shoes-count" action="add">
+                        <button
+                            class="icon-container"
+                            onclick="incrementor(event)"
+                            for="levi-shoes-count"
+                            action="add"
+                        >
                             <span class="material-icons">add</span>
                         </button>
                     </div>
@@ -59,37 +98,70 @@
                     </span>
                 </div>
             </div>
-        </section>
 
-        <form id="info">
-            <section id="contact-info">
-                <h3>Contact Information</h3>
-                <input-wc label="E-mail" placeholder="Enter your email" type="email" startIcon="email"></input-wc>
-                <input-wc label="Phone" placeholder="Enter your phone..." startIcon="phone"></input-wc>
-            </section>
+            <form id="info-form">
+                <section id="contact-info">
+                    <h3>Contact Information</h3>
+                    <input-wc
+                        label="E-mail"
+                        placeholder="Enter your email"
+                        type="email"
+                        startIcon="email"
+                    ></input-wc>
+                    <input-wc
+                        label="Phone"
+                        placeholder="Enter your phone..."
+                        startIcon="phone"
+                    ></input-wc>
+                </section>
 
-            <section id="shipping-info">
-                <h3>Shipping Address</h3>
-                <input-wc label="Full name" placeholder="Enter your name..." value="Rodney Cotton" startIcon="account_circle" ></input-wc>
-                <input-wc label="Address" placeholder="Your address..." startIcon="home"></input-wc>
-                <input-wc label="City" placeholder="Your city..." startIcon="apartment"></input-wc>
-                <div class="side-inputs">
-                    <input-wc label="Country" placeholder="Your country..." startIcon="apartment" fullWidth="false"></input-wc>
-                    <input-wc label="Postal Code" placeholder="Your postal code..." startIcon="markunread_mailbox" fullWidth="false"></input-wc>
-                </div>
-                <div id="save-info-container">
-                    <input type="checkbox" id="save-info-input" />
-                    <label for="save-info-input" id="save-info-label">Save this information for next time</label>
-                </div>
-            </section>
-            <input type="submit" value="Continue" class="button" />
-        </form>
-    </main>
+                <section id="shipping-info">
+                    <h3>Shipping Address</h3>
+                    <input-wc
+                        label="Full name"
+                        placeholder="Enter your name..."
+                        value="Rodney Cotton"
+                        startIcon="account_circle"
+                    ></input-wc>
+                    <input-wc
+                        label="Address"
+                        placeholder="Your address..."
+                        startIcon="home"
+                    ></input-wc>
+                    <input-wc
+                        label="City"
+                        placeholder="Your city..."
+                        startIcon="apartment"
+                    ></input-wc>
+                    <div class="side-inputs">
+                        <input-wc
+                            label="Country"
+                            placeholder="Your country..."
+                            startIcon="apartment"
+                            fullWidth="false"
+                        ></input-wc>
+                        <input-wc
+                            label="Postal Code"
+                            placeholder="Your postal code..."
+                            startIcon="markunread_mailbox"
+                            fullWidth="false"
+                        ></input-wc>
+                    </div>
+                    <div id="save-info-container">
+                        <input type="checkbox" id="save-info-input" />
+                        <label for="save-info-input" id="save-info-label"
+                            >Save this information for next time</label
+                        >
+                    </div>
+                </section>
+                <input type="submit" value="Continue" class="button" />
+            </form>
+        </main>
 
-    <footer class="credit">Sahithyan @ DevChallenges.io</footer>
+        <footer class="credit">Sahithyan @ DevChallenges.io</footer>
 
-    <script src="./script.js"></script>
+        <script src="./script.js"></script>
 
-    <script src="./web-components/input-component.js" ></script>
-</body>
+        <script src="./web-components/input-component.js"></script>
+    </body>
 </html>

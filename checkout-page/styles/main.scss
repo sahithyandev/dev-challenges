@@ -1,27 +1,35 @@
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import './../../global';
-@import './abstract/index';
-@import './base/index';
-@import './components/index';
+@import "./../../global";
+@import "./abstract/index";
+@import "./base/index";
+@import "./components/index";
+@import "./media-queries";
+@import "./overrides";
 
 :root {
     font-size: 16px;
-}
+    @extend .montserrat;
 
-* {
-    font-family: Montserrat;
+    @include desktop {
+        font-size: 18px;
+    }
 }
 
 body {
     padding-right: 12px;
     padding-left: 12px;
     overflow-x: hidden;
+
+    @include desktop {
+        margin: auto;
+        width: 68vw;
+        margin-top: 40px;
+    }
     // background-color: blue;
 }
 
 h1 {
     @extend .fw-600;
-    color: #4E5150;
+    color: #4e5150;
     font-size: 1.8rem;
 }
 h3 {
@@ -31,16 +39,24 @@ h3 {
 }
 
 .price::before {
-    content: '$';
+    content: "$";
 }
 
-.material-icons {
-    // pointer-events: fill;
+main {
+    @include desktop {
+        display: grid;
+        grid-template-columns: auto 10% auto;
+        grid-template-rows: auto;
+        grid-template-areas: "form . pricing";
+        // column-gap: 20px;
+    }
 }
 
 .items-container {
     @extend .flex--column;
-    background-color: #F2F2F2;
+    grid-area: pricing;
+    background-color: #f2f2f2;
+    height: fit-content;
     padding: 26px;
     border-radius: 12px;
     margin-bottom: 40px;
@@ -48,18 +64,25 @@ h3 {
     .pricing {
         @extend .flex--column;
         margin-top: 80px;
-        
+
         .pricing-item {
             @extend .flex;
             padding-top: 8px;
             margin-bottom: 8px;
             justify-content: space-between;
-            border-top: 1px solid #BDBDBD;
+            border-top: 1px solid #bdbdbd;
+
+            .price-detail {
+                font-size: 0.9em;
+            }
+            .price {
+                font-size: 0.85em;
+            }
 
             span {
                 @extend .fw-600;
                 color: #333333;
-                font-size: .8rem;
+                font-size: 0.8rem;
             }
         }
     }
@@ -82,7 +105,7 @@ h3 {
         grid-area: preview;
     }
     .name {
-        grid-area: name;        
+        grid-area: name;
     }
     .price-container {
         @extend .fw-600;
@@ -90,11 +113,11 @@ h3 {
 
         .last-price {
             @extend .color--orange;
-            font-size: .8rem;
+            font-size: 0.95rem;
         }
         .normal-price {
-            color: #4E5150;
-            font-size: .65rem;
+            color: #4e5150;
+            font-size: 0.72rem;
             text-decoration: line-through;
         }
     }
@@ -114,15 +137,14 @@ h3 {
             width: 40px;
             color: #333333;
             background: none;
-            border: none
+            border: none;
         }
 
         .icon-container {
-            background-color: #E0E0E0;
-            // remove button styles
-            @extend .btn-reset;
+            background-color: #e0e0e0;
             .material-icons {
-                font-size: 1rem;
+                font-size: 1.4em;
+                // line-height: 1rem;
                 color: #828282;
             }
         }
@@ -130,11 +152,12 @@ h3 {
 }
 
 // form
-#info {
+#info-form {
     @extend .flex--column;
     align-items: flex-end;
 }
-#contact-info, #shipping-info {
+#contact-info,
+#shipping-info {
     width: 100%;
 }
 
@@ -145,7 +168,6 @@ h3 {
     column-gap: 10px;
 }
 
-
 #save-info-container {
     @extend .flex;
     align-items: center;
@@ -153,23 +175,22 @@ h3 {
     #save-info-input {
         margin-right: 8px;
     }
-    
+
     #save-info-label {
-        @extend .fw-600;        
-        color: #4F4F4F;
-        font-size: .7rem;
-    }    
+        @extend .fw-600;
+        color: #4f4f4f;
+        font-size: 0.7rem;
+    }
 }
 
 // submit button
 .button {
-    @extend .fw-600;
-    background-color: #F2994A;
+    @extend .montserrat-600;
+    background-color: #f2994a;
     color: white;
     padding: 17px 45px;
     border: none;
     border-radius: 12px;
-    width: fit-content; 
-    font-family: Montserrat;   
+    width: fit-content;
     font-style: 1rem;
 }
