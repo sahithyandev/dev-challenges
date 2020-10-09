@@ -1,15 +1,36 @@
 @import "./typography";
 @import "./atomic";
 @import "./overrides";
+@import "./variables";
+@import "./media-queries";
+@import "./components/designer-card";
 
-$background: #181719;
-$color: #ffffff;
+html {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: 100vh;
+}
 
 body {
+    margin: 0;
     background-color: $background;
-    margin: 4vh auto;
-    width: 90vw;
     color: $color;
+    margin-top: 4vh;
+    padding-bottom: 20px;
+    width: 90vw;
+
+    @include mobile {
+        padding-left: 14px;
+        padding-right: 14px;
+        width: auto;
+        font-size: 14px;
+    }
+}
+
+* {
+    overflow-x: hidden;
+    border: 0;
 }
 
 .logo {
@@ -23,6 +44,33 @@ body {
     padding: 8px;
 }
 
+#nav-icon {
+    display: none;
+
+    @include mobile {
+        display: block;
+        position: relative;
+        z-index: 10;
+    }
+
+    &::after {
+        content: "menu";
+        font-family: "Material Icons";
+        font-size: 28px;
+    }
+}
+
+body[nav-toggled="true"] {
+    #nav-icon::after {
+        content: "close";
+    }
+
+    #nav-link-container {
+        z-index: 7;
+        opacity: 1;
+    }
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -32,9 +80,10 @@ nav {
 #nav-link-container {
     display: flex;
     column-gap: 32px;
+
     .nav-link {
         @extend .capitalize, .montserrat-500;
-        font-size: 1rem;
+        font-size: 1em;
         line-height: 22px;
         letter-spacing: 0em;
 
@@ -44,32 +93,124 @@ nav {
     }
 }
 
+@include mobile {
+    #nav-link-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 0;
+
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 36px;
+        text-align: center;
+
+        height: 100vh;
+        font-size: 20px;
+        background-color: $background;
+
+        opacity: 0;
+        transition: all 0.25s ease;
+    }
+}
+
 main {
-    background-color: red;
+    // width: 90%;
+    background-color: $background;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 64%;
     grid-template-rows: repeat(4, auto);
     grid-template-areas:
         "heading image-box"
         "description image-box"
         "read-more image-box"
         ". image-box";
+    margin-top: 40px;
+
+    @include mobile {
+        margin-top: 12px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+            "heading"
+            "description"
+            "read-more"
+            "image-box";
+    }
 
     h2 {
         grid-area: heading;
     }
     p {
         grid-area: description;
-    }
-    #read-more-button {
-        grid-area: read-more;
-    }
-    #second-column {
-        grid-area: image-box;
+        max-width: 90%;
 
-        img {
-            height: auto;
-            width: 100%;
+        @include mobile {
+            max-width: 74%;
         }
     }
+    #read-more {
+        @extend .montserrat-600;
+        grid-area: read-more;
+        width: fit-content;
+        font-size: 1em;
+
+        display: inline-flex;
+        text-align: center;
+        align-items: center;
+
+        @include mobile {
+            margin-top: 20px;
+            margin-bottom: 36px;
+            font-size: 0.88em;
+        }
+
+        i.material-icons {
+            vertical-align: middle;
+            margin-left: 6px;
+
+            @include mobile {
+                margin-left: 10px;
+            }
+        }
+    }
+    #second-column {
+        // background-color: red;
+        height: 100%;
+        grid-area: image-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        #big-image {
+            width: 90%;
+        }
+
+        .designer-card {
+            position: relative;
+            top: -10%;
+            left: -10%;
+        }
+
+        @include mobile {
+            #big-image {
+                width: 100%;
+            }
+            .designer-card {
+                left: -10px;
+            }
+        }
+    }
+}
+
+footer.credit {
+    @extend .montserrat-600;
+    color: #a9a9a9;
+    width: fit-content;
+    margin: auto;
+    padding: 6px 18px;
+    border-top: 1px solid #a9a9a9;
+    font-size: 0.9em;
+    text-align: center;
 }

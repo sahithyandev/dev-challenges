@@ -2,11 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link
             rel="shortcut icon"
@@ -27,11 +23,14 @@
 
         <title>Devchallenges</title>
     </head>
-    <body>
+    <body nav-toggled="false">
         <nav>
             <div class="brand">
                 <div class="logo">this interior</div>
             </div>
+
+            <div id="nav-icon"></div>
+            <!-- ::after element is used to show icon here -->
 
             <div id="nav-link-container">
                 <div class="nav-link selected">
@@ -50,19 +49,46 @@
         </nav>
 
         <main>
-            <!-- <div>
-            </div> -->
             <h2>Modern interior</h2>
             <p>
                 A full-Service residential & commercial interior design and
                 staging company offering professional organizing & eco-services.
             </p>
-            <button id="read-more-button">
+            <a id="read-more" href="#">
                 Read more <i class="material-icons">arrow_right_alt</i>
-            </button>
+            </a>
             <div id="second-column">
-                <img src="./assets/photo1.png" alt="photo-1" />
+                <img src="./assets/photo1.png" id="big-image" alt="photo-1" />
+
+                <div class="designer-card">
+                    <div class="designer-card--info">
+                        <img
+                            src="./assets/photo2.png"
+                            class="designer-card--image"
+                            alt="designer-image"
+                        />
+                        <span class="designer-card--name">aliza webber</span>
+                        <span class="designer-card--occupation"
+                            >interior designer</span
+                        >
+                    </div>
+                    <p class="designer-card--description">
+                        Designed in 2020 by Aliza Webber
+                    </p>
+                </div>
             </div>
         </main>
+        <footer class="credit">Sahithyan @ DevChallenges.io</footer>
     </body>
+
+    <script>
+        let parent = document.body;
+        let navIcon = document.getElementById("nav-icon");
+
+        navIcon.onclick = () => {
+            let navToggled = parent.getAttribute("nav-toggled") == "true"; // simple trick to convert string to boolean
+            console.log(navToggled);
+            parent.setAttribute("nav-toggled", !navToggled);
+        };
+    </script>
 </html>
