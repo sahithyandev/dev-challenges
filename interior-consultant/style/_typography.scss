@@ -1,0 +1,42 @@
+.crimson-pro {
+    font-family: "Crimson Pro";
+}
+
+.lora {
+    font-family: "Lora";
+}
+
+.montserrat {
+    font-family: "Montserrat";
+}
+
+.crimson-pro-200 {
+    @extend .crimson-pro;
+    font-weight: 200;
+}
+
+.lora-400 {
+    @extend .lora;
+    font-weight: 400;
+}
+.lora-700 {
+    @extend .lora;
+    font-weight: 700;
+}
+
+.montserrat-300 {
+    @extend .montserrat;
+    font-weight: 300;
+}
+.montserrat-500 {
+    @extend .montserrat;
+    font-weight: 500;
+}
+.montserrat-600 {
+    @extend .montserrat;
+    font-weight: 600;
+}
+.montserrat-700 {
+    @extend .montserrat;
+    font-weight: 700;
+}

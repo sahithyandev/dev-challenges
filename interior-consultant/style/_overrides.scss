@@ -1,0 +1,32 @@
+@import "./atomic";
+
+h2 {
+    @extend .lora-400;
+    font-size: 3rem;
+    line-height: 61px;
+    letter-spacing: 0em;
+}
+
+p {
+    @extend .montserrat-300;
+    font-size: 1.2rem;
+    line-height: 29px;
+    letter-spacing: 0em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    display: inline-flex;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+
+    i.material-icons {
+        vertical-align: middle;
+    }
+}
