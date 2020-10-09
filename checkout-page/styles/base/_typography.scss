@@ -1,0 +1,17 @@
+@import "./variables";
+
+.color--orange {
+    color: $orange;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.montserrat {
+    font-family: "Montserrat";
+}
+
+.montserrat-600 {
+    @extend .montserrat, .fw-600;
+}

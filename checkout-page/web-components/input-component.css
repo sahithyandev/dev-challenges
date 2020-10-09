@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+.color--orange {
+  color: #F2994A;
+}
+
+.fw-600, .montserrat-600, #input-element .label, #input-element div .input {
+  font-weight: 600;
+}
+
+.montserrat, .montserrat-600, #input-element {
+  font-family: "Montserrat";
+}
+
+.flex, .flex--column, #input-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex--column, #input-element {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+#input-element {
+  width: 100%;
+  position: relative;
+  margin-bottom: var(--margin-bottom);
+}
+
+#input-element .label {
+  font-size: var(--label-font-size);
+  color: var(--label-color);
+  margin-bottom: 4px;
+}
+
+#input-element div {
+  position: relative;
+  width: 100%;
+}
+
+#input-element div .input {
+  padding: 18px 12px 18px 12px;
+  font-size: var(--input-font-size, 14px);
+  border-radius: var(--border-radius);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  font-family: "Montserrat";
+  border: var(--border-width) solid var(--border-color);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: var(--background-color);
+  color: #333333;
+  resize: none;
+}
+
+#input-element div .input-icon {
+  --height: 20px;
+  font-size: var(--height);
+  position: absolute;
+  bottom: calc(50% - var(--height) / 2);
+  left: 12px;
+  color: var(--icon-color);
+}
+
+#input-element #start-icon ~ input {
+  padding-left: calc(3% + 30px);
+}
+
+@media (min-width: 900px) {
+  #input-element #start-icon ~ input {
+    padding-left: 38px;
+  }
+}
+
+#input-element #end-icon {
+  left: auto !important;
+  right: 2% !important;
+}
+
+#input-element:not([disabled]):hover .label {
+  --label-color: var(--hover-label-color);
+}
+
+#input-element:not([disabled]):hover .input {
+  --border-width: var(--hover-border-width);
+  --border-color: var(--hover-border-color);
+}
+
+#input-element:not([disabled]):focus-within .input {
+  --border-color: var(--focus-border-color) !important;
+  --border-width: var(--focus-border-width) !important;
+  outline: none;
+}
+
+#input-element:not([disabled]):focus-within .label {
+  --label-color: var(--focus-label-color) !important;
+}
+
+.full-width {
+  width: 100% !important;
+}
