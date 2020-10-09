@@ -11,11 +11,52 @@
         <link rel="shortcut icon" href="./assets/devchallenges.png" />
 
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
         />
 
-        <title>GitHub Pages</title>
+        <link rel="stylesheet" href="./styles/main.css" />
+        <title>Home | GitHub Jobs</title>
     </head>
-    <body></body>
+    <body>
+        <header>
+            <div class="poppins-300 brand">
+                <span class="poppins-700">Github</span> Jobs
+            </div>
+
+            <div>
+                <img
+                    src="./assets/backgroundImg.png"
+                    class="bg-image"
+                    alt="bg image"
+                />
+                <!-- TK -->
+                <!-- <input type="text" /> -->
+            </div>
+        </header>
+
+        <main>
+            <div id="sort-options">
+                <div class="check-input-container">
+                    <!-- TK -->
+                    <input type="checkbox" id="full-time-toggle" />
+                    <label for="full-time-toggle">Full time</label>
+                </div>
+
+                <div>
+                    <h4 class="uppercase">Location</h4>
+                    <input
+                        type="text"
+                        placeholder="City, state, zip code or country"
+                    />
+                </div>
+            </div>
+            <div id="results-container"></div>
+        </main>
+    </body>
+    <script src="./job-card.js"></script>
 </html>

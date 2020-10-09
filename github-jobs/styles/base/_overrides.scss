@@ -1,0 +1,7 @@
+@import "./typography";
+
+h4 {
+    @extend .uppercase, .poppins-700;
+    color: #b9bdcf;
+    font-size: 1em;
+}

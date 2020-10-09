@@ -1,0 +1,31 @@
+.poppins {
+    font-family: "Poppins";
+}
+.roboto {
+    font-family: "Roboto";
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+$fonts: (
+    "poppins": (
+        300,
+        500,
+        700,
+    ),
+    "roboto": (
+        400,
+        500,
+        700,
+    ),
+);
+
+@each $font, $weights in $fonts {
+    @each $wght in $weights {
+        .#{$font}-#{$wght} {
+            @extend .#{$font};
+            font-weight: $wght;
+        }
+    }
+}

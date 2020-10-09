@@ -3,11 +3,11 @@
   color: #F2994A;
 }
 
-.fw-600, .montserrat-600, #input-element .label, #input-element div .input {
+.fw-600, .montserrat-600, #input-element div .input, #input-element .label {
   font-weight: 600;
 }
 
-.montserrat, .montserrat-600, #input-element {
+.montserrat, .montserrat-600, #input-element div .input, #input-element {
   font-family: "Montserrat";
 }
 
@@ -54,7 +54,6 @@
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
-  font-family: "Montserrat";
   border: var(--border-width) solid var(--border-color);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

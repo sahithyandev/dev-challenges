@@ -1,0 +1,41 @@
+@import "./../base/index";
+
+.material-icon {
+    font-family: "Material Icons";
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.job-card {
+    display: grid;
+
+    .company-logo {
+        width: 90px;
+        height: 90px;
+    }
+    .company-name {
+        @extend .roboto-700;
+    }
+    .job-position {
+        @extend .roboto-400;
+    }
+    .job-time {
+        @extend .roboto-700;
+    }
+
+    .other-info {
+        @extend .roboto-500;
+        .company-location {
+            &::before {
+                @extend .material-icon;
+                content: "public";
+            }
+        }
+        .job-posted-before {
+            &::before {
+                @extend .material-icon;
+                content: "access_time";
+            }
+        }
+    }
+}
