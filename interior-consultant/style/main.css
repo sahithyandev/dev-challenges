@@ -141,7 +141,7 @@ a {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: dc-name;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .designer-card .designer-card--info .designer-card--occupation {
@@ -149,7 +149,7 @@ a {
   -ms-grid-column: 2;
   grid-area: dc-occupation;
   color: #828282;
-  font-size: 0.75em;
+  font-size: 0.8em;
 }
 
 .designer-card .designer-card--description {
@@ -164,10 +164,9 @@ html {
 }
 
 body {
-  margin: 0;
   background-color: #181719;
   color: #ffffff;
-  margin-top: 4vh;
+  margin: 4vh auto;
   padding-bottom: 20px;
   width: 90vw;
 }
@@ -245,30 +244,30 @@ nav {
 }
 
 #nav-link-container .nav-link {
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 22px;
   letter-spacing: 0em;
 }
 
 @media (max-width: 600px) {
   #nav-link-container {
-    font-size: 20px;
-    background-color: #181719;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    height: 100vh;
-    text-align: center;
-    row-gap: 36px;
+    z-index: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    z-index: 0;
+    row-gap: 36px;
+    text-align: center;
+    height: 100vh;
+    font-size: 20px;
+    background-color: #181719;
     opacity: 0;
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
@@ -324,7 +323,7 @@ main #read-more {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 1em;
+  font-size: 1.1em;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;

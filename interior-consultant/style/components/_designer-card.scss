@@ -42,13 +42,13 @@
         .designer-card--name {
             grid-area: dc-name;
             @extend .montserrat-500, .capitalize;
-            font-size: 0.9em;
+            font-size: 1em;
         }
         .designer-card--occupation {
             grid-area: dc-occupation;
             @extend .montserrat-500;
             color: #828282;
-            font-size: 0.75em;
+            font-size: 0.8em;
         }
     }
     .designer-card--description {
