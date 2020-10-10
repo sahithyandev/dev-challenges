@@ -28,6 +28,14 @@ class CheckBox extends HTMLElement {
         inputElement.checked = this.isChecked;
         console.log('wooo');
     }
+
+    set valueChanged(listener) {
+        this.shadow.querySelector('#input').onchange = listener;
+    }
+
+    get checked() {
+        return this.shadow.querySelector('#input').checked;
+    }
 }
 
 window.customElements.define('check-box', CheckBox);

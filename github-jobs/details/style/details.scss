@@ -48,6 +48,28 @@
     margin: 32px 0;
     // TK
     // background-color: red;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "img company-name"
+        "img company-location";
+    column-gap: 12px;
+
+    .company-logo {
+        border-radius: 4px;
+        $width: 64px;
+        width: $width;
+        height: $width;
+    }
+
+    .company-name {
+        @extend .roboto-700;
+        font-size: 1.2em;
+        line-height: 21px;
+        letter-spacing: 0em;
+    }
 }
 
 .description {

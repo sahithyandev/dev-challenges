@@ -2,7 +2,7 @@
   font-family: "Poppins";
 }
 
-.roboto, .roboto-400, .description, .roboto-500, .roboto-700 {
+.roboto, .roboto-400, .description, .roboto-500, .roboto-700, .company-info .company-name {
   font-family: "Roboto";
 }
 
@@ -30,7 +30,7 @@
   font-weight: 500;
 }
 
-.roboto-700 {
+.roboto-700, .company-info .company-name {
   font-weight: 700;
 }
 
@@ -38,7 +38,7 @@
   font-family: "Poppins";
 }
 
-.roboto, .roboto-400, .description, .roboto-500, .roboto-700 {
+.roboto, .roboto-400, .description, .roboto-500, .roboto-700, .company-info .company-name {
   font-family: "Roboto";
 }
 
@@ -66,7 +66,7 @@
   font-weight: 500;
 }
 
-.roboto-700 {
+.roboto-700, .company-info .company-name {
   font-weight: 700;
 }
 
@@ -144,6 +144,30 @@ a {
 
 .company-info {
   margin: 32px 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "img company-name" "img company-location";
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+}
+
+.company-info .company-logo {
+  border-radius: 4px;
+  width: 64px;
+  height: 64px;
+}
+
+.company-info .company-name {
+  font-size: 1.2em;
+  line-height: 21px;
+  letter-spacing: 0em;
 }
 
 .description {

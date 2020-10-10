@@ -19,15 +19,15 @@ class JobCard extends HTMLElement {
         content.innerHTML = JOB_CARD_TEMPLATE;
 
         const a = document.createElement('a');
-        a.href = "./details"
+        a.target = '_blank';
+        a.appendChild(content);
 
         this.shadow = this.attachShadow({ mode: 'open' });
         // createStyleLink('job-card')
-        this.shadow.append(...[createStyleLink('job-card'), content]);
+        this.shadow.append(...[createStyleLink('job-card'), a]);
     }
 
     connectedCallback() {
-        console.log('sss', this);
         let jobData = extractAttributes(this);
         this.updateJobData(jobData);
     }
@@ -38,7 +38,8 @@ class JobCard extends HTMLElement {
 
     updateJobData(jobData) {
         let postedOn = new Date(jobData["job-posted-on"]);
-        console.log(jobData);
+        // console.log(jobData);
+        this.shadow.querySelector('a').href = `./details/index.html?jobId=${jobData['job-id']}`
         this.shadow.querySelector('.company-logo').src = jobData['company-logo'];
         this.shadow.querySelector('.company-name').innerHTML = jobData['company-name'];
         this.shadow.querySelector('.job-position').innerHTML = jobData['job-position'];

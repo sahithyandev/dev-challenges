@@ -1,6 +1,18 @@
+let container = document.getElementById('results-container');
 document.body.onload = () => {
     loadData();
     updateIconInputs();
+
+    $('#search-button').addEventListener('click', searchButtonPressed);
+
+    $('#full-time-toggle').valueChanged = (event) => {
+        console.log(event.target.checked);
+        beforeLoadingData();
+    };
+}
+
+function searchButtonPressed() {
+    beforeLoadingData();
 }
 
 function updateIconInputs() {
@@ -16,21 +28,39 @@ function updateIconInputs() {
     })
 }
 
+// use this function to update the jobCardsa after first time
+function beforeLoadingData() {
+    container.innerHTML = '';
+    loadData();
+}
+
 function loadData() {
-    let fetchURL = "https://jobs.github.com/positions.json"
+    let params = {
+        description: $('#search-bar').value,
+        full_time: $('#full-time-toggle').checked
+    }
+    // TK
+    let queriedParams = Object.entries(params).filter(v => v[1] != false).map(v => {
+        let rS = `${v[0]}=${v[1]}`
+        return rS;
+    }).join('&');
+    console.log(queriedParams);
+
+    let fetchURL = `https://jobs.github.com/positions.json?${queriedParams}`
 
     fetch(API_MIDDLEWARE + fetchURL).then(res => {
-        console.log(res);
+        // console.log(res);
         return res.json()
     }).then(data => {
-        console.log(data);
-        addJobCards(data.slice(0, 5));
+        // console.log(data);
+
+        addJobCards(data); //.slice(0, 15));
+        // console.log(container);
     })
 }
 
 function addJobCards(jobArray) {
     console.log(jobArray)
-    let container = document.getElementById('results-container');
 
     let jobCards = [];
     for (let job of jobArray) {

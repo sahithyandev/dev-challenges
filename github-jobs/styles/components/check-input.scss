@@ -11,7 +11,9 @@
     }
 
     label {
+        @extend .poppins-500;
         height: fit-content;
         font-size: 0.9em;
+        color: #334680;
     }
 }
