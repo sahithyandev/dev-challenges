@@ -1,0 +1,23 @@
+.check-input-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.check-input-container input {
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.check-input-container label {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 0.9em;
+}

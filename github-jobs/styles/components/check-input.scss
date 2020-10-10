@@ -1,18 +1,17 @@
 .check-input-container {
     display: inline-flex;
-    justify-content: center;
-    // background-color: blue;
+    align-items: center;
 
     input {
         border: none;
         border-radius: 2px;
         cursor: pointer;
         margin: 0;
-        margin-right: 6px;
+        margin-right: 10px;
     }
 
     label {
         height: fit-content;
-        // background-color: red;
+        font-size: 0.9em;
     }
 }

@@ -1,0 +1,209 @@
+.poppins, .poppins-300, .poppins-500, a, .poppins-700, h4 {
+  font-family: "Poppins";
+}
+
+.roboto, .roboto-400, .job-position, .roboto-500, .other-info, .roboto-700, .company-name, .job-type {
+  font-family: "Roboto";
+}
+
+.uppercase, h4 {
+  text-transform: uppercase;
+}
+
+.poppins-300 {
+  font-weight: 300;
+}
+
+.poppins-500, a {
+  font-weight: 500;
+}
+
+.poppins-700, h4 {
+  font-weight: 700;
+}
+
+.roboto-400, .job-position {
+  font-weight: 400;
+}
+
+.roboto-500, .other-info {
+  font-weight: 500;
+}
+
+.roboto-700, .company-name, .job-type {
+  font-weight: 700;
+}
+
+.poppins, .poppins-300, .poppins-500, a, .poppins-700, h4 {
+  font-family: "Poppins";
+}
+
+.roboto, .roboto-400, .job-position, .roboto-500, .other-info, .roboto-700, .company-name, .job-type {
+  font-family: "Roboto";
+}
+
+.uppercase, h4 {
+  text-transform: uppercase;
+}
+
+.poppins-300 {
+  font-weight: 300;
+}
+
+.poppins-500, a {
+  font-weight: 500;
+}
+
+.poppins-700, h4 {
+  font-weight: 700;
+}
+
+.roboto-400, .job-position {
+  font-weight: 400;
+}
+
+.roboto-500, .other-info {
+  font-weight: 500;
+}
+
+.roboto-700, .company-name, .job-type {
+  font-weight: 700;
+}
+
+h4 {
+  color: #b9bdcf;
+  font-size: 1em;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1e86ff;
+}
+
+.material-icon, .company-location::before, .job-posted-before::before {
+  font-family: "Material Icons";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.horizontal-flip {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.job-card {
+  display: -ms-grid;
+  display: grid;
+  min-height: 90px;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 4px;
+  -ms-grid-columns: 120px auto max-content;
+      grid-template-columns: 120px auto -webkit-max-content;
+      grid-template-columns: 120px auto max-content;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "img company-name ." "img job-position ." "img is-full-time other";
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.company-logo {
+  width: 90px;
+  height: auto;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: img;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.company-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: company-name;
+  font-size: 0.82em;
+  font-style: normal;
+  line-height: 14px;
+  letter-spacing: 0em;
+  color: #334680;
+}
+
+.job-position {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: job-position;
+  font-size: 1.2em;
+  line-height: 21px;
+  letter-spacing: 0em;
+  color: #334680;
+}
+
+.job-type {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: is-full-time;
+  font-size: 0.8em;
+  -ms-flex-item-align: center;
+      align-self: center;
+  letter-spacing: 0em;
+  color: #334680;
+  border: 1px solid #334680;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 4px 6px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+}
+
+.other-info {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: other;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 20px;
+}
+
+.company-location::before {
+  content: "public";
+}
+
+.company-location,
+.job-posted-before {
+  color: #b9bdcf;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  font-size: 0.8em;
+}
+
+.job-posted-before::before {
+  content: "access_time";
+}

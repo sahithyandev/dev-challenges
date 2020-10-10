@@ -1,0 +1,86 @@
+@import "./../base/index";
+
+.job-card {
+    display: grid;
+    min-height: 90px;
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 4px;
+    grid-template-columns: 120px auto max-content;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "img company-name ."
+        "img job-position ."
+        "img is-full-time other";
+    box-shadow: 0px 2px 4px 0px rgba(#000000, 0.05);
+    cursor: pointer;
+}
+
+.company-logo {
+    width: 90px;
+    height: auto;
+    grid-area: img;
+    align-self: center;
+}
+.company-name {
+    @extend .roboto-700;
+    grid-area: company-name;
+
+    font-size: 0.82em;
+    font-style: normal;
+    line-height: 14px;
+    letter-spacing: 0em;
+    color: #334680;
+}
+.job-position {
+    @extend .roboto-400;
+    grid-area: job-position;
+    font-size: 1.2em;
+    line-height: 21px;
+    letter-spacing: 0em;
+    color: #334680;
+}
+.job-type {
+    @extend .roboto-700;
+    grid-area: is-full-time;
+    font-size: 0.8em;
+    align-self: center;
+    // line-height: 14px;
+    letter-spacing: 0em;
+    color: #334680;
+
+    border: 1px solid #334680;
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+    padding: 4px 6px;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.other-info {
+    @extend .roboto-500;
+    grid-area: other;
+    display: inline-flex;
+    gap: 20px;
+}
+.company-location {
+    &::before {
+        @extend .material-icon;
+        content: "public";
+    }
+}
+.company-location,
+.job-posted-before {
+    color: #b9bdcf;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8em;
+}
+.job-posted-before {
+    &::before {
+        @extend .material-icon;
+        content: "access_time";
+    }
+}

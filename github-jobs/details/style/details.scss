@@ -1,0 +1,59 @@
+@import "./../../styles/base/index";
+@import "./../../styles/components/index";
+
+.left-column {
+    width: 40%;
+}
+#go-back-link {
+    display: inline-flex;
+    align-content: center;
+}
+
+.how-to-apply {
+    max-width: 320px;
+}
+
+#top-section {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    // background-color: red;
+
+    #job-position {
+        color: #334680;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    // #job-type {
+    //     @extend .roboto-700;
+    //     grid-area: is-full-time;
+    //     font-size: 0.9em;
+    //     align-self: center;
+    //     // line-height: 14px;
+    //     letter-spacing: 0em;
+    //     color: #334680;
+
+    //     border: 1px solid #334680;
+    //     width: fit-content;
+    //     height: fit-content;
+    //     display: inline-flex;
+    //     padding: 4px 6px;
+    //     align-items: center;
+    //     border-radius: 4px;
+    // }
+}
+
+.company-info {
+    margin: 32px 0;
+    // TK
+    // background-color: red;
+}
+
+.description {
+    @extend .roboto-400;
+    color: #334680;
+    font-size: 1em;
+    line-height: 24px;
+    letter-spacing: 0em;
+}

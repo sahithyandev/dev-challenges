@@ -1,0 +1,31 @@
+@import "./base/index";
+@import "./components/index";
+
+body {
+    @extend .poppins;
+    background: $background;
+    // background-color: red;
+    margin: auto;
+    width: 90vw;
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+
+.brand {
+    font-size: 24px;
+    font-style: normal;
+    line-height: 36px;
+    letter-spacing: 0em;
+    margin-bottom: 25px;
+}
+
+main {
+    display: flex;
+    // background-color: red;
+    gap: 32px;
+}
+
+.left-column {
+    width: 28%;
+    // background-color: red !important;
+}

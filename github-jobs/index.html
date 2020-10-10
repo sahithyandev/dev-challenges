@@ -18,8 +18,10 @@
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet"
         />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
         <link rel="stylesheet" href="./styles/main.css" />
+        <link rel="stylesheet" href="./styles/global.css" />
         <title>Home | GitHub Jobs</title>
     </head>
     <body>
@@ -28,35 +30,67 @@
                 <span class="poppins-700">Github</span> Jobs
             </div>
 
-            <div>
+            <div style="position: relative">
                 <img
                     src="./assets/backgroundImg.png"
                     class="bg-image"
                     alt="bg image"
                 />
-                <!-- TK -->
-                <!-- <input type="text" /> -->
+                <div
+                    class="button-inside-input icon-input"
+                    id="search-bar-container"
+                    icon="work_outline"
+                >
+                    <input
+                        type="text"
+                        id="search-bar"
+                        placeholder="Title, companies, expertise or benefits"
+                    />
+                    <button id="search-button">Search</button>
+                </div>
             </div>
         </header>
 
         <main>
-            <div id="sort-options">
-                <div class="check-input-container">
-                    <!-- TK -->
-                    <input type="checkbox" id="full-time-toggle" />
-                    <label for="full-time-toggle">Full time</label>
-                </div>
+            <div id="sort-options" class="left-column">
+                <check-box label="Full time"></check-box>
 
-                <div>
+                <div style="width: 100%">
                     <h4 class="uppercase">Location</h4>
-                    <input
-                        type="text"
-                        placeholder="City, state, zip code or country"
-                    />
+                    <div
+                        class="icon-input"
+                        id="location-search-bar"
+                        icon="public"
+                    >
+                        <input
+                            type="text"
+                            placeholder="City, state, zip code or country"
+                        />
+                    </div>
+
+                    <div id="location-results">
+                        <check-box label="London"></check-box>
+                        <check-box label="Amsterdam"></check-box>
+                        <check-box label="New Yokr"></check-box>
+                        <check-box label="Berlin"></check-box>
+                    </div>
                 </div>
             </div>
-            <div id="results-container"></div>
+            <div id="results-container">
+                <!-- <job-card
+                    company-logo="https://github-jobs.s3.amazonaws.com/F67sVeQiGuUsQgeJHjK7YqqV?response-content-disposition=inline%3B%20filename%3D%22Ocado%20Group%20logo%20Square%20image%20%2528002%2529.png%22%3B%20filename%2A%3DUTF-8%27%27Ocado%2520Group%2520logo%2520Square%2520image%2520%2528002%2529.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJENXOYUQN2IQEWRA%2F20201009%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201009T125443Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=24151315e25623b2a9897baaa9284dc76bbe46a5621ed3caa6958358302af554"
+                    company-name="Kasisto"
+                    job-position="Front-End Software Engineer"
+                    job-type="Full time"
+                    company-location="New York"
+                    job-posted-on="Thu Oct 08 22:14:34 UTC 2020"
+                ></job-card> -->
+            </div>
         </main>
     </body>
-    <script src="./job-card.js"></script>
+    <script src="./global.js"></script>
+    <script src="./components/index.js"></script>
+    <script src="./components/job-card.js"></script>
+    <script src="./components/checkbox.js"></script>
+    <script src="./index.js"></script>
 </html>

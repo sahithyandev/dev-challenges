@@ -1,0 +1,13 @@
+.icon-input {
+    // position: relative;
+}
+.icon-input::before {
+    @extend .material-icon;
+    content: attr(icon);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 14px;
+    color: #b9bdcf;
+    // background-color: red;
+}
