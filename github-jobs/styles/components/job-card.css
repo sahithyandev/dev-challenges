@@ -172,7 +172,7 @@ a {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: job-type;
-  font-size: 0.8em;
+  font-size: 0.72em;
   -ms-flex-item-align: center;
       align-self: center;
   letter-spacing: 0em;

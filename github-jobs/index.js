@@ -18,7 +18,8 @@ document.body.onload = () => {
     LOCATION_SEARCH_BAR_INPUT = document.getElementById("location-search-bar-input");
 
     LOCATION_SEARCH_BAR_INPUT.addEventListener('input', (event) => {
-        $('#location-results').querySelectorAll('check-box[checked]').forEach(el => el.checked = false);
+        Array.from(document.querySelectorAll('#location-results check-box[checked]')).forEach(el => { el.checked = false; console.log(el) });
+        // console.log(document.querySelectorAll('#location-results check-box[checked]'));
     })
 }
 document.onkeydown = (event) => {

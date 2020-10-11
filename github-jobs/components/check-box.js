@@ -13,7 +13,7 @@ class CheckBox extends HTMLElement {
         content.innerHTML = CHECKBOX_TEMPLATE;
 
         this.shadow = this.attachShadow({ mode: 'closed' });
-        this.shadow.append(...[createStyleLink('check-input'), content]);
+        this.shadow.append(...[createStyleLink('check-box'), content]);
     }
 
     connectedCallback() {
@@ -23,27 +23,36 @@ class CheckBox extends HTMLElement {
         labelElement.innerHTML = this.dataset.label;
 
         let inputElement = this.shadow.querySelector('#input');
-        inputElement.onchange = (event) => {
-            this.isChecked = event.target.checked
-        }
         inputElement.checked = this.isChecked;
+        inputElement.onchange = (event) => {
+            this.updateChecked(event.target.checked);
+        }
+    }
+
+    updateChecked(value) {
+        console.log('value to set', value);
+        this.setAttribute('checked', value);
+        this.isChecked = value;
+        if (value == false) this.removeAttribute('checked');
     }
 
     set valueChanged(listener) {
         // console.log(this.dataset.label);
         this.shadow.querySelector('#input').onchange = (event) => {
-            let value = event.target.checked
-            this.setAttribute('checked', value);
-            if (value == false) this.removeAttribute('checked');
+            let value = event.target.checked;
+            // console.log('checked-value', this.dataset.label, value);
+            this.updateChecked(value);
             listener.call(this, event, value, this.dataset.label)
         };
     }
 
     get checked() {
-        return this.shadow.querySelector('#input').checked;
+        return this.isChecked;
+        // return this.shadow.querySelector('#input').checked;
     }
 
     set checked(value) {
+        this.updateChecked(value);
         if (![true, false].includes(value)) {
             throw new Error("TypeError: Expected Boolean")
         }
