@@ -19,7 +19,6 @@ class JobCard extends HTMLElement {
         content.innerHTML = JOB_CARD_TEMPLATE;
 
         const a = document.createElement('a');
-        a.target = '_blank';
         a.appendChild(content);
 
         this.shadow = this.attachShadow({ mode: 'open' });
