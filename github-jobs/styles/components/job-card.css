@@ -110,12 +110,23 @@ a {
   -ms-grid-columns: 120px auto max-content;
       grid-template-columns: 120px auto -webkit-max-content;
       grid-template-columns: 120px auto max-content;
-  -ms-grid-rows: auto auto auto;
-      grid-template-rows: auto auto auto;
-      grid-template-areas: "img company-name ." "img job-position ." "img is-full-time other";
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: "img company-name ." "img job-position ." "img job-type other";
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .job-card {
+    -ms-grid-columns: 100px auto auto;
+        grid-template-columns: 100px auto auto;
+    -ms-grid-rows: (auto)[4];
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: "img company-name company-name" "img job-position job-position" "img job-type ." ". other other";
+    row-gap: 8px;
+  }
 }
 
 .company-logo {
@@ -151,16 +162,22 @@ a {
   color: #334680;
 }
 
+@media (max-width: 500px) {
+  .job-position {
+    margin-bottom: 6px;
+  }
+}
+
 .job-type {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
-  grid-area: is-full-time;
+  grid-area: job-type;
   font-size: 0.8em;
   -ms-flex-item-align: center;
       align-self: center;
   letter-spacing: 0em;
   color: #334680;
-  border: 1px solid #334680;
+  border: 1.5px solid #334680;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -185,6 +202,12 @@ a {
   display: -ms-inline-flexbox;
   display: inline-flex;
   gap: 20px;
+}
+
+@media (max-width: 500px) {
+  .other-info {
+    margin-top: 28px;
+  }
 }
 
 .company-location::before {

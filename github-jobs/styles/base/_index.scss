@@ -2,6 +2,12 @@
 @import "./variables";
 @import "./overrides";
 
+@mixin mobile {
+    @media (max-width: 500px) {
+        @content;
+    }
+}
+
 .material-icon {
     font-family: "Material Icons";
     font-size: 20px;

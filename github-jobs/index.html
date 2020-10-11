@@ -2,11 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="shortcut icon" href="./assets/devchallenges.png" />
 
@@ -30,12 +26,7 @@
                 <span class="poppins-700">Github</span> Jobs
             </div>
 
-            <div style="position: relative">
-                <img
-                    src="./assets/backgroundImg.png"
-                    class="bg-image"
-                    alt="bg image"
-                />
+            <div class="top-section-container">
                 <div
                     class="button-inside-input icon-input"
                     id="search-bar-container"
@@ -53,7 +44,10 @@
 
         <main>
             <div id="sort-options" class="left-column">
-                <check-box label="Full time" id="full-time-toggle"></check-box>
+                <check-box
+                    data-label="Full time"
+                    id="full-time-toggle"
+                ></check-box>
 
                 <div style="width: 100%">
                     <h4 class="uppercase">Location</h4>
@@ -65,14 +59,15 @@
                         <input
                             type="text"
                             placeholder="City, state, zip code or country"
+                            id="location-search-bar-input"
                         />
                     </div>
 
                     <div id="location-results">
-                        <check-box label="London"></check-box>
-                        <check-box label="Amsterdam"></check-box>
-                        <check-box label="New York"></check-box>
-                        <check-box label="Berlin"></check-box>
+                        <check-box data-label="London"></check-box>
+                        <check-box data-label="Amsterdam"></check-box>
+                        <check-box data-label="New York"></check-box>
+                        <check-box data-label="Berlin"></check-box>
                     </div>
                 </div>
             </div>

@@ -17,24 +17,38 @@ class CheckBox extends HTMLElement {
     }
 
     connectedCallback() {
-        let data = extractAttributes(this);
+        // let data = extractAttributes(this);
+        // console.log(data);
         let labelElement = this.shadow.querySelector('label');
-        labelElement.innerHTML = data.label;
+        labelElement.innerHTML = this.dataset.label;
 
         let inputElement = this.shadow.querySelector('#input');
         inputElement.onchange = (event) => {
             this.isChecked = event.target.checked
         }
         inputElement.checked = this.isChecked;
-        console.log('wooo');
     }
 
     set valueChanged(listener) {
-        this.shadow.querySelector('#input').onchange = listener;
+        // console.log(this.dataset.label);
+        this.shadow.querySelector('#input').onchange = (event) => {
+            let value = event.target.checked
+            this.setAttribute('checked', value);
+            if (value == false) this.removeAttribute('checked');
+            listener.call(this, event, value, this.dataset.label)
+        };
     }
 
     get checked() {
         return this.shadow.querySelector('#input').checked;
+    }
+
+    set checked(value) {
+        if (![true, false].includes(value)) {
+            throw new Error("TypeError: Expected Boolean")
+        }
+        this.shadow.querySelector('#input').checked = value;
+
     }
 }
 

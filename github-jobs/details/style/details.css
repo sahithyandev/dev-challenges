@@ -126,6 +126,12 @@ a {
   max-width: 320px;
 }
 
+@media (max-width: 500px) {
+  .how-to-apply {
+    font-size: 0.9em;
+  }
+}
+
 #top-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,9 +143,33 @@ a {
 }
 
 #top-section #job-position {
+  margin-bottom: 10px;
   color: #334680;
   margin-top: 10px;
-  margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+  #top-section {
+    margin-bottom: 16px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  #top-section #job-position {
+    line-height: 1em;
+    margin-bottom: 0;
+  }
+  #top-section .job-type {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
 }
 
 .company-info {

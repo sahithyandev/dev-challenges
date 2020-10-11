@@ -1,3 +1,105 @@
+.poppins, .poppins-300, .poppins-500, a, .check-input-container label, .poppins-700, h4 {
+  font-family: "Poppins";
+}
+
+.roboto, .roboto-400, .roboto-500, .roboto-700 {
+  font-family: "Roboto";
+}
+
+.uppercase, h4 {
+  text-transform: uppercase;
+}
+
+.poppins-300 {
+  font-weight: 300;
+}
+
+.poppins-500, a, .check-input-container label {
+  font-weight: 500;
+}
+
+.poppins-700, h4 {
+  font-weight: 700;
+}
+
+.roboto-400 {
+  font-weight: 400;
+}
+
+.roboto-500 {
+  font-weight: 500;
+}
+
+.roboto-700 {
+  font-weight: 700;
+}
+
+.poppins, .poppins-300, .poppins-500, a, .check-input-container label, .poppins-700, h4 {
+  font-family: "Poppins";
+}
+
+.roboto, .roboto-400, .roboto-500, .roboto-700 {
+  font-family: "Roboto";
+}
+
+.uppercase, h4 {
+  text-transform: uppercase;
+}
+
+.poppins-300 {
+  font-weight: 300;
+}
+
+.poppins-500, a, .check-input-container label {
+  font-weight: 500;
+}
+
+.poppins-700, h4 {
+  font-weight: 700;
+}
+
+.roboto-400 {
+  font-weight: 400;
+}
+
+.roboto-500 {
+  font-weight: 500;
+}
+
+.roboto-700 {
+  font-weight: 700;
+}
+
+h4 {
+  color: #b9bdcf;
+  font-size: 1em;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1e86ff;
+}
+
+.material-icon {
+  font-family: "Material Icons";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.horizontal-flip {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.hidden {
+  display: none !important;
+}
+
 .check-input-container {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

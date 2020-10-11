@@ -9,6 +9,11 @@ body {
     width: 90vw;
     margin-top: 32px;
     margin-bottom: 40px;
+
+    @include mobile {
+        width: 92vw;
+        margin-top: 20px;
+    }
 }
 
 .brand {
@@ -23,9 +28,18 @@ main {
     display: flex;
     // background-color: red;
     gap: 32px;
+
+    @include mobile {
+        // background-color: red;
+        flex-direction: column;
+    }
 }
 
 .left-column {
     width: 28%;
+    @include mobile {
+        // background-color: green;
+        width: 100%;
+    }
     // background-color: red !important;
 }
