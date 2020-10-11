@@ -1,0 +1,19 @@
+.montserrat {
+    font-family: "Montserrat";
+}
+
+$fonts: (
+    "montserrat": (
+        500,
+        700,
+    ),
+);
+
+@each $font, $weights in $fonts {
+    @each $wght in $weights {
+        .#{$font}-#{$wght} {
+            @extend .#{$font};
+            font-weight: $wght;
+        }
+    }
+}
