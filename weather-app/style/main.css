@@ -1,1 +1,158 @@
-/* No CSS */
+.raleway, .raleway-100, .raleway-500, #today-card .date, #today-temperature, .raleway-600, #today-card .weather-message, :root {
+  font-family: "Raleway";
+}
+
+.raleway-100 {
+  font-weight: 100;
+}
+
+.raleway-500, #today-card .date, #today-temperature {
+  font-weight: 500;
+}
+
+.raleway-600, #today-card .weather-message {
+  font-weight: 600;
+}
+
+.material-icon, #today-card .location::before {
+  font-family: "Material Icons";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+:root {
+  font-size: 18px;
+}
+
+body {
+  background-color: green;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  color: #e7e7eb;
+}
+
+body[data-temperature-unit="C"] {
+  --temperature-unit: "\00b0 C";
+}
+
+body[data-temperature-unit="F"] {
+  --temperature-unit: "\00b0 F";
+}
+
+main {
+  padding: 42px;
+  background-image: url("./../assets/Cloud-background.png");
+  background-repeat: no-repeat;
+  background-color: #1e213a;
+  background-blend-mode: screen;
+  background-size: 150%;
+  background-position: 50% -5%;
+  position: relative;
+  min-width: 250px;
+  z-index: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.9;
+  background-color: #1e213a;
+}
+
+#today-card {
+  margin-top: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#today-card .weather-message {
+  font-size: 36px;
+  color: #a09fb1;
+}
+
+#today-card .date,
+#today-card .location {
+  color: #88869d;
+}
+
+#today-card .date {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 1em;
+}
+
+#today-card .date span:not(:last-child)::after {
+  content: "\00b7";
+  margin: 0 4px;
+}
+
+#today-card .location {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#today-card .location::before {
+  content: "location_on";
+}
+
+#today-temperature {
+  font-size: 6em;
+}
+
+#today-temperature::after {
+  font-size: 0.4em !important;
+  color: #a09fb1;
+}
+
+#temperature-unit-switcher input[name="temperature-unit"] {
+  display: none;
+}
+
+#temperature-unit-switcher label {
+  background: #e7e7eb;
+  cursor: pointer;
+}
+
+#temperature-unit-switcher label::before {
+  content: "\00b0";
+}
+
+.temperature::after {
+  content: var(--temperature-unit);
+  font-size: 1.2rem;
+}

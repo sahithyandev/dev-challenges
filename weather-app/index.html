@@ -11,12 +11,94 @@
         <link rel="shortcut icon" href="/_assets/devchallenges.png" />
 
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;500;600&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+
         <link rel="stylesheet" href="./style/main.css" />
 
         <title>Weather App</title>
     </head>
-    <body></body>
+    <body data-temperature-unit="F">
+        <main>
+            <!-- <div class="search">
+                <input type="text" name="search-bar" />
+            </div> -->
+
+            <div id="today-card">
+                <img src="./assets/Shower.png" alt="" />
+                <div id="today-temperature" class="temperature">15</div>
+
+                <span class="weather-message">Shower</span>
+
+                <div class="date">
+                    <span>Today</span>
+                    <span>Fri, 5 Jun</span>
+                </div>
+                <div class="location">Helsinki</div>
+            </div>
+        </main>
+        <section>
+            <div id="temperature-unit-switcher">
+                <div class="radio-input-container">
+                    <input
+                        type="radio"
+                        name="temperature-unit"
+                        value="C"
+                        id="celcius-unit-selection"
+                        checked
+                    />
+                    <label for="celcius-unit-selection">C</label>
+                </div>
+                <div class="radio-input-container">
+                    <input
+                        type="radio"
+                        value="F"
+                        name="temperature-unit"
+                        id="fahrenheit-unit-selection"
+                    />
+                    <label for="fahrenheit-unit-selection">F</label>
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <script>
+        updateTemperatureUnit();
+        function updateTemperatureUnit() {
+            let newValue = document.querySelector(
+                `input[name='temperature-unit']:checked`
+            ).value;
+            document.body.dataset.temperatureUnit = newValue;
+        }
+        document.body.onload = () => {
+            updateTemperatureUnit();
+        };
+        document
+            .querySelectorAll(`input[name='temperature-unit']`)
+            .forEach((el) => {
+                el.onchange = function () {
+                    updateTemperatureUnit();
+                };
+            });
+    </script>
 </html>
+
+<!--
+    User story: I can see city weather as default, preferably my current location
+    User story: I can search for city
+    User story: I can see weather of today and the next 5 days
+    User story: I can see the date and location of the weather
+    User story: I can see according to image for each type of weather
+    User story: I can see the min and max degree each day
+    User story: I can see wind status and wind direction
+    User story: I can see humidity percentage
+    User story: I can see visibility indicator
+    User story: I can see air pressure number
+    User story(optional): I can request my current location weather
+    User story(optional): I can convert temperature in Celcius to Fahrenheit and vice vers
+-->

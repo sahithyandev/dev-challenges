@@ -1,0 +1,129 @@
+@import "./base/index";
+
+:root {
+    @extend .raleway;
+    font-size: 18px;
+}
+
+body {
+    background-color: green;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    color: #e7e7eb;
+}
+body[data-temperature-unit="C"] {
+    --temperature-unit: "\00b0 C";
+}
+
+body[data-temperature-unit="F"] {
+    --temperature-unit: "\00b0 F";
+}
+
+main {
+    padding: 42px;
+    background-image: url("./../assets/Cloud-background.png");
+    background-repeat: no-repeat;
+    background-color: #1e213a;
+    background-blend-mode: screen;
+    background-size: 150%;
+    background-position: 50% -5%;
+    position: relative;
+    min-width: 250px;
+    z-index: 0;
+    flex-direction: column;
+    display: flex;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        opacity: 0.9;
+        background-color: #1e213a;
+    }
+}
+
+#today-card {
+    margin-top: 60px;
+    // text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    flex: 1;
+    // background-color: gold;
+
+    .weather-message {
+        @extend .raleway-600;
+        font-size: 36px;
+
+        color: #a09fb1;
+    }
+
+    .date,
+    .location {
+        color: #88869d;
+    }
+
+    .date {
+        @extend .raleway-500;
+        display: inline-flex;
+        font-size: 1em;
+
+        span:not(:last-child)::after {
+            content: "\00b7";
+            margin: 0 4px;
+        }
+    }
+
+    .location {
+        display: inline-flex;
+        align-items: center;
+        &::before {
+            @extend .material-icon;
+            content: "location_on";
+        }
+    }
+}
+
+#today-temperature {
+    @extend .raleway-500;
+    font-size: 6em;
+    // line-height: 169px;
+
+    &::after {
+        font-size: 0.4em !important;
+        color: #a09fb1;
+    }
+}
+
+#temperature-unit-switcher {
+    input[name="temperature-unit"] {
+        display: none;
+    }
+
+    label {
+        background: #e7e7eb;
+        cursor: pointer;
+        &::before {
+            content: "\00b0";
+        }
+    }
+}
+
+.temperature {
+    &::after {
+        content: var(--temperature-unit);
+
+        // font-family: Raleway;
+        // font-weight: 500;
+        font-size: 1.2rem;
+    }
+}
