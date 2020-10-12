@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | RQG</title>
-    <link rel="stylesheet" href="./styles/index.css" />
-</head>
-<body>
-    <header>
-        <button class="random-container button--blank" onclick="getRandomQuote();">
-            random
-            <span class="material-icons md-16">
-                loop
-            </span>
-        </button>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home | RQG</title>
+        <link
+            rel="shortcut icon"
+            href="/_assets/devchallenges.png"
+            type="image/png"
+        />
+        <link rel="stylesheet" href="./styles/index.css" />
+    </head>
+    <body>
+        <header>
+            <button
+                class="random-container button--blank"
+                onclick="getRandomQuote();"
+            >
+                random
+                <span class="material-icons md-16"> loop </span>
+            </button>
+        </header>
 
-    <main>
-        <div class="quote">
-
-            <div class="quote__content" id="quote_content">
-                <!-- “The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency.”  -->
-            </div>
-            <a href="./author/?author=Bill Gates" target="_blank" id="author_link" class="link--blank">
-                <div class="quote__author">
-                    <div class="quote__author__name" id="author_name">
-                        <!-- Bill Gates -->
-                    </div>
-                    <div class="quote__author__genre" id="quote_genre">
-                        <!-- business -->
-                    </div>
-                    
-                    <span class="material-icons quote__author__next-icon icon">
-                        arrow_right_alt
-                    </span>
+        <main>
+            <div class="quote">
+                <div class="quote__content" id="quote_content">
+                    <!-- “The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency. The second is that automation applied to an inefficient operation will magnify the inefficiency.”  -->
                 </div>
-            </a>
-        </div>
-    </main>
+                <a
+                    href="./author/?author=Bill Gates"
+                    target="_blank"
+                    id="author_link"
+                    class="link--blank"
+                >
+                    <div class="quote__author">
+                        <div class="quote__author__name" id="author_name">
+                            <!-- Bill Gates -->
+                        </div>
+                        <div class="quote__author__genre" id="quote_genre">
+                            <!-- business -->
+                        </div>
 
-    <footer class="credit">
-        Sahithyan @ DevChallenges.io
-    </footer>
+                        <span
+                            class="material-icons quote__author__next-icon icon"
+                        >
+                            arrow_right_alt
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </main>
 
-    <script src="./global.js"></script>
-    <script src="./app.js"></script>
-</body>
+        <footer class="credit">Sahithyan @ DevChallenges.io</footer>
+
+        <script src="./global.js"></script>
+        <script src="./app.js"></script>
+    </body>
 </html>

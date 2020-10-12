@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Component</title>
-    <link rel="stylesheet" href="./styles/main.css">
-</head>
-<body>
-    <main>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Input Component</title>
+        <link
+            rel="shortcut icon"
+            href="/_assets/devchallenges.png"
+            type="image/png"
+        />
+        <link rel="stylesheet" href="./styles/main.css" />
+    </head>
+    <body>
+        <main>
+            <h1>Inputs</h1>
 
-        <h1>Inputs</h1>
-        
-        <div class="input-container">
-            <input-wc></input-wc>
-            <input-wc error></input-wc>
-            <input-wc disabled></input-wc>
+            <div class="input-container">
+                <input-wc></input-wc>
+                <input-wc error></input-wc>
+                <input-wc disabled></input-wc>
 
-            <h4>With helper-text</h4>
-            <div class="section">
-                <input-wc helper-text="Some interesting text"></input-wc>
-                <input-wc helper-text="Some interesting text" error></input-wc>
+                <h4>With helper-text</h4>
+                <div class="section">
+                    <input-wc helper-text="Some interesting text"></input-wc>
+                    <input-wc
+                        helper-text="Some interesting text"
+                        error
+                    ></input-wc>
+                </div>
+                <h4>With icons</h4>
+                <div class="section">
+                    <input-wc start-icon="local_phone"></input-wc>
+                    <input-wc end-icon="lock"></input-wc>
+                </div>
+                <input-wc value="Text"></input-wc>
+                <h4>In different sizes</h4>
+                <div class="section">
+                    <input-wc size="sm"></input-wc>
+                    <input-wc size="md"></input-wc>
+                </div>
+                <input-wc full-width></input-wc>
+                <input-wc multiline row="4"></input-wc>
+                <!-- <input type="text" class="input" aria-label="Label" /> -->
+                <!-- <input type="text" class="input input--error" /> -->
+                <!-- <input type="text" class="input input--disabled" /> -->
             </div>
-            <h4>With icons</h4>
-            <div class="section">
-                <input-wc start-icon="local_phone"></input-wc>
-                <input-wc end-icon="lock"></input-wc>
-            </div>
-            <input-wc value="Text"></input-wc>
-            <h4>In different sizes</h4>
-            <div class="section">
-                <input-wc size="sm"></input-wc>
-                <input-wc size="md"></input-wc>
-            </div>
-            <input-wc full-width></input-wc>
-            <input-wc multiline row="4"></input-wc>
-            <!-- <input type="text" class="input" aria-label="Label" /> -->
-            <!-- <input type="text" class="input input--error" /> -->
-            <!-- <input type="text" class="input input--disabled" /> -->
-        </div>
-        
-    </main>
+        </main>
 
-    <footer class="credit">
-        Sahithyan @ devchallenges.io
-    </footer>
+        <footer class="credit">Sahithyan @ devchallenges.io</footer>
 
-    <script src="./web-components/input-component.js"></script>
-</body>
+        <script src="./web-components/input-component.js"></script>
+    </body>
 </html>
