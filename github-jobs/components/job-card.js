@@ -31,13 +31,8 @@ class JobCard extends HTMLElement {
         this.updateJobData(jobData);
     }
 
-    attributeChangedCallback(...a) {
-        console.log('j', a)
-    }
-
     updateJobData(jobData) {
         let postedOn = new Date(jobData["job-posted-on"]);
-        // console.log(jobData);
         this.shadow.querySelector('a').href = `./details/index.html?jobId=${jobData['job-id']}`
         this.shadow.querySelector('.company-logo').src = jobData['company-logo'];
         this.shadow.querySelector('.company-name').innerHTML = jobData['company-name'];

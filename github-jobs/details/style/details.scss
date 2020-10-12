@@ -28,6 +28,10 @@
         color: #334680;
         margin-top: 10px;
     }
+
+    .job-type {
+        font-size: 0.8em;
+    }
     @include mobile {
         margin-bottom: 16px;
         flex-direction: column;

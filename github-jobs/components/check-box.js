@@ -17,8 +17,6 @@ class CheckBox extends HTMLElement {
     }
 
     connectedCallback() {
-        // let data = extractAttributes(this);
-        // console.log(data);
         let labelElement = this.shadow.querySelector('label');
         labelElement.innerHTML = this.dataset.label;
 
@@ -30,17 +28,14 @@ class CheckBox extends HTMLElement {
     }
 
     updateChecked(value) {
-        console.log('value to set', value);
         this.setAttribute('checked', value);
         this.isChecked = value;
         if (value == false) this.removeAttribute('checked');
     }
 
     set valueChanged(listener) {
-        // console.log(this.dataset.label);
         this.shadow.querySelector('#input').onchange = (event) => {
             let value = event.target.checked;
-            // console.log('checked-value', this.dataset.label, value);
             this.updateChecked(value);
             listener.call(this, event, value, this.dataset.label)
         };

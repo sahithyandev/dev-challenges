@@ -8,7 +8,6 @@ document.body.onload = () => {
     $('#search-button').addEventListener('click', beforeLoadingData);
 
     $('#full-time-toggle').valueChanged = (event) => {
-        console.log(event);
         beforeLoadingData();
     };
 
@@ -18,8 +17,7 @@ document.body.onload = () => {
     LOCATION_SEARCH_BAR_INPUT = document.getElementById("location-search-bar-input");
 
     LOCATION_SEARCH_BAR_INPUT.addEventListener('input', (event) => {
-        Array.from(document.querySelectorAll('#location-results check-box[checked]')).forEach(el => { el.checked = false; console.log(el) });
-        // console.log(document.querySelectorAll('#location-results check-box[checked]'));
+        Array.from(document.querySelectorAll('#location-results check-box[checked]')).forEach(el => { el.checked = false; });
     })
 }
 document.onkeydown = (event) => {
@@ -38,7 +36,6 @@ function updateIconInputs() {
 
 // call this function when a location-filter is toggled
 function locationToggled(event, newValue, label) {
-    console.log('loc-tog', label, newValue);
     let otherLocations = Array.from(document.getElementById('location-results').querySelectorAll(`check-box:not([data-label='${label}'])`))
     otherLocations.forEach(location => { location.checked = false });
     LOCATION_SEARCH_BAR_INPUT.value = ''
@@ -72,21 +69,17 @@ function loadData() {
         let rS = `${v[0]}=${v[1]}`
         return rS;
     }).join('&');
-    console.log(queriedParams);
 
     let fetchURL = `https://jobs.github.com/positions.json?${queriedParams}`
 
     fetch(API_MIDDLEWARE + fetchURL).then(res => res.json()).then(data => {
-        addJobCards(data); //.slice(0, 15));
-        // console.log(container);
+        addJobCards(data);
     }).catch(err => {
         console.warn(err);
     })
 }
 
 function addJobCards(jobArray) {
-    console.log(jobArray)
-
     let jobCards = [];
     for (let job of jobArray) {
         let el = document.createElement('job-card');

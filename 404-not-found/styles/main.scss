@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-@import './../../global';
-@import './components/button';
-@import './abstracts/media-queries';
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import "./../../global";
+@import "./components/button";
+@import "./abstracts/media-queries";
 
 * {
     box-sizing: border-box;
+    font-size: 18px;
+    @include mobile {
+        font-size: 16px;
+    }
 }
 
 body {
@@ -24,13 +28,13 @@ body {
 header {
     font-weight: 700;
     text-transform: uppercase;
-    font-size: .9em;
+    font-size: 1em;
     letter-spacing: -0.08em;
 
     @include desktop {
         position: absolute;
         top: 20px;
-        left: 40px
+        left: 40px;
     }
 }
 
@@ -75,7 +79,7 @@ main {
     margin: auto;
     // min-width: 300px;
     align-self: center;
-    
+
     @include mobile {
         height: 100%;
         width: auto;
@@ -96,11 +100,11 @@ main {
 }
 #message {
     grid-area: message;
-    width: 40%;
+    width: 50%;
     min-width: 300px;
     margin-bottom: 40px;
     line-height: 26px;
-    color: #4F4F4F;
+    color: #4f4f4f;
 }
 #back-button {
     grid-area: back;
@@ -116,7 +120,7 @@ main {
 footer {
     width: fit-content;
     margin: auto;
-    
+
     position: absolute;
     bottom: 10px;
     left: 0;

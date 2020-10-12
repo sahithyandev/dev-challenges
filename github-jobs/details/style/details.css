@@ -148,6 +148,10 @@ a {
   margin-top: 10px;
 }
 
+#top-section .job-type {
+  font-size: 0.8em;
+}
+
 @media (max-width: 500px) {
   #top-section {
     margin-bottom: 16px;

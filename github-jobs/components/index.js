@@ -13,6 +13,5 @@ function extractAttributes(element) {
     for (let attribute of element.getAttributeNames()) {
         attributes[attribute] = element.getAttribute(attribute);
     }
-    // console.log(this.getAttributeNames(), attributes);
     return attributes;
 }
