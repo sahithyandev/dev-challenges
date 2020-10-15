@@ -24,7 +24,7 @@
         <title>Interior Consultant</title>
     </head>
     <body nav-toggled="false">
-        <nav>
+        <header>
             <div class="brand">
                 <div class="logo">this interior</div>
             </div>
@@ -32,7 +32,7 @@
             <div id="nav-icon"></div>
             <!-- ::after element is used to show icon here -->
 
-            <div id="nav-link-container">
+            <nav id="nav-link-container">
                 <div class="nav-link selected">
                     <a href="#">home</a>
                 </div>
@@ -45,8 +45,8 @@
                 <div class="nav-link">
                     <a href="#">contact</a>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </header>
 
         <main>
             <h2>Modern interior</h2>
@@ -87,7 +87,6 @@
 
         navIcon.onclick = () => {
             let navToggled = parent.getAttribute("nav-toggled") == "true"; // simple trick to convert string to boolean
-            console.log(navToggled);
             parent.setAttribute("nav-toggled", !navToggled);
         };
     </script>
