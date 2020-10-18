@@ -1,1 +1,0 @@
-window.customElements.define('progress-bar-container', ProgressBarContainer);

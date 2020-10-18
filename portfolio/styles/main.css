@@ -1,11 +1,196 @@
-.montserrat, .montserrat-500, .montserrat-700 {
+.montserrat, .montserrat-500, .tag, .personal-info-card .personal-info-card__name-container .personal-info-card__job, .personal-info-card .personal-info-card__description, #projects-section .section__heading, .project-card .project-card__project-title, .project-card .project-card__project-description, .montserrat-600, .personal-info-card .personal-info-card__name-container .personal-info-card__name, .montserrat-700, * {
   font-family: "Montserrat";
 }
 
-.montserrat-500 {
+.montserrat-500, .tag, .personal-info-card .personal-info-card__name-container .personal-info-card__job, .personal-info-card .personal-info-card__description, #projects-section .section__heading, .project-card .project-card__project-title, .project-card .project-card__project-description {
   font-weight: 500;
+}
+
+.montserrat-600, .personal-info-card .personal-info-card__name-container .personal-info-card__name {
+  font-weight: 600;
 }
 
 .montserrat-700 {
   font-weight: 700;
+}
+
+.material-icons, span[data-icon]::before {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: "liga";
+          font-feature-settings: "liga";
+}
+
+span[data-icon] {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+span[data-icon]::before {
+  content: attr(data-icon);
+  font-size: 18px;
+}
+
+.card, .personal-info-card, .project-card {
+  padding: 22px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.tag {
+  color: #4f4f4f;
+  font-size: 0.9em;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.tag::before {
+  content: "#";
+}
+
+button {
+  cursor: pointer;
+}
+
+.personal-info-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 300px;
+  gap: 10px;
+}
+
+.personal-info-card .person-info-card__image {
+  width: 100%;
+}
+
+.personal-info-card .personal-info-card__name-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.personal-info-card .personal-info-card__name-container .personal-info-card__name {
+  color: #4f4f4f;
+}
+
+.personal-info-card .personal-info-card__name-container .personal-info-card__job {
+  color: #828282;
+}
+
+.personal-info-card .personal-info-card__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+  font-size: 0.9em;
+  color: #4f4f4f;
+}
+
+.personal-info-card .personal-info-card__description {
+  color: #828282;
+}
+
+#projects-section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#projects-section .section__heading {
+  font-size: 1.1rem;
+  line-height: 22px;
+  color: #4f4f4f;
+  margin-top: 0;
+}
+
+.project-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 240px auto;
+      grid-template-columns: 240px auto;
+  -ms-grid-rows: (auto)[4];
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas: "img tags" "img title" "img description" "img buttons";
+  height: 240px;
+}
+
+.project-card .project-card__preview {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 1;
+  grid-area: img;
+  width: 100%;
+}
+
+.project-card .project-card__project-title {
+  font-size: 1.4em;
+  line-height: 29px;
+  letter-spacing: 0em;
+  color: #333333;
+  margin: 0 !important;
+}
+
+.project-card .project-card__project-description {
+  font-size: 1em;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: #828282;
+}
+
+:root {
+  font-size: 18px;
+}
+
+html {
+  margin: 0;
+}
+
+body {
+  background: #f2f2f2;
+  margin: 0;
+  padding: 40px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
 }

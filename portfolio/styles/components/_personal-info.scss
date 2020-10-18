@@ -1,0 +1,34 @@
+.personal-info-card {
+    @extend .card;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    gap: 10px;
+
+    .person-info-card__image {
+        width: 100%;
+    }
+    .personal-info-card__name-container {
+        display: flex;
+        flex-direction: column;
+        .personal-info-card__name {
+            @extend .montserrat-600;
+            color: #4f4f4f;
+        }
+        .personal-info-card__job {
+            @extend .montserrat-500;
+            color: #828282;
+        }
+    }
+    .personal-info-card__contact {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.9em;
+        color: #4f4f4f;
+    }
+    .personal-info-card__description {
+        @extend .montserrat-500;
+        color: #828282;
+    }
+}

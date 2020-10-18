@@ -18,11 +18,71 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
 
         <title>Portfolio</title>
         <link rel="stylesheet" href="./styles/main.css" />
     </head>
-    <body></body>
-    <script src="./components/progress-bar-container.js"></script>
-    <script src="./components/index.js"></script>
+    <body>
+        <main>
+            <div class="personal-info-card">
+                <img
+                    src="./assets/profile-img.png"
+                    alt=""
+                    class="person-info-card__image"
+                />
+                <div class="personal-info-card__name-container">
+                    <span class="personal-info-card__name"
+                        >Sahithyan Kandathasan</span
+                    >
+                    <span class="personal-info-card__job"
+                        >Front-end Developer</span
+                    >
+                </div>
+                <div class="personal-info-card__contact">
+                    <span class="personal-info-card__email" data-icon="email"
+                        >sahithyan2701@gmail.com</span
+                    >
+                    <span class="personal-info-card__phone" data-icon="call"
+                        >(+94) 077 573 2943</span
+                    >
+                </div>
+                <p class="personal-info-card__description">
+                    Self-motivated developer, who is willing to learn and create
+                    outstanding UI applications.
+                </p>
+            </div>
+            <section id="projects-section">
+                <h3 class="card section__heading">Projects</h3>
+                <div id="projects-container">
+                    <div class="project-card">
+                        <img
+                            src="./assets/profile-img.png"
+                            class="project-card__preview"
+                        />
+                        <div id="tags-container">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">responsive</span>
+                        </div>
+                        <h2 class="project-card__project-title">Recipe Blog</h2>
+                        <p class="project-card__project-description">
+                            In this project, I work with HTML and CSS to create
+                            a responsive page . The design is from
+                            devchallenge.io. Donec aliquam est dui, vel
+                            vestibulum diam sollicitudin id. Quisque feugiat
+                            malesuada molestie.
+                        </p>
+                        <div class="buttons-container">
+                            <button class="btn--primary">Demo</button>
+                            <button class="btn--secondary">Code</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>

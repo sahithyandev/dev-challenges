@@ -1,0 +1,64 @@
+@import "./typography";
+
+.material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: "liga";
+}
+
+* {
+    @extend .montserrat;
+}
+
+span[data-icon] {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    &::before {
+        @extend .material-icons;
+        content: attr(data-icon);
+        font-size: 18px;
+    }
+}
+
+// this is not a normal card
+.card {
+    padding: 22px;
+    background-color: white;
+    border-radius: 12px;
+}
+.tag {
+    @extend .montserrat-500;
+    color: #4f4f4f;
+    font-size: 0.9em;
+    line-height: 20px;
+    letter-spacing: 0em;
+
+    &::before {
+        content: "#";
+    }
+}
+
+// OVERRIDING STYLES
+button {
+    cursor: pointer;
+}
