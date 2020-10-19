@@ -6,6 +6,8 @@ If you find any problems with this README, open an issue.
 
 ## Challenge Details
 
+_Collab. Landing Page_ is not a chllange from [DevChallenges](https://devchallenges.io). It is created by Thu Nghiem (creator of [DevChallenges](https://devchallenges.io)).
+
 | Challenge Title | Demo | Status |
 | --------------- | ---- | ------ |
 | 404 Not Found | [Demo](https://dev-challenges.vercel.app/http://dev-challenges.vercel.app/404-not-found) | Completed |
@@ -20,6 +22,6 @@ If you find any problems with this README, open an issue.
 | Random Quote Generator | [Demo](https://dev-challenges.vercel.app/http://dev-challenges.vercel.app/random-quote-generator) | Completed |
 | Recipe Page | [Demo](https://dev-challenges.vercel.app/http://dev-challenges.vercel.app/recipe-page) | Completed |
 | Weather App | [Demo](https://dev-challenges.vercel.app/http://dev-challenges.vercel.app/weather-app) | In Progress |
-| Collab. Landing Page | [Demo](https://dev-challenges.vercel.app/http://dev-challenges.vercel.app/collab.-landing-page) | In Progress |
+| Collab. Landing Page | [Demo](https://dev-challenges.vercel.app/http://dev-challenges.vercel.app/collab.-landing-page) | Finished |
 
 This README was created using [./README_TEMPLATE.md](./README_TEMPLATE.md) by [build-readme.js](./build-readme.js)
