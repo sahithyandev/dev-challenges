@@ -1,20 +1,21 @@
 .project-card {
     @extend .card;
     display: grid;
-    grid-template-columns: minmax(auto, 300px) auto;
+    grid-template-columns: fit-content auto;
     grid-template-rows: repeat(4, auto);
     grid-template-areas:
         "img tags"
         "img title"
         "img description"
         "img buttons";
-    height: 240px;
+    height: 200px;
     column-gap: 10px;
 
     .project-card__preview {
         grid-area: img;
         // height: 250px;
         height: 100%;
+        margin-right: 10px;
     }
     #tags-container {
         @extend .flex;

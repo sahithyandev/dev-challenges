@@ -24,6 +24,11 @@
         gap: 4px;
         // font-size: 0.9em;
         color: #4f4f4f;
+
+        span i {
+            margin-right: 6px;
+            // color: red;
+        }
     }
     .personal-info-card__description {
         @extend .montserrat-500;

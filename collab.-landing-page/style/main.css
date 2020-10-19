@@ -46,7 +46,7 @@ header nav {
 }
 
 header nav .nav--link {
-    color: #BDBDBD;
+    color: #bdbdbd;
     font-weight: 500;
 }
 
@@ -61,7 +61,12 @@ header #get-started {
     color: white;
     font-size: 1em;
     font-weight: 500;
-    background: linear-gradient(var(--angle), #FAA245 0%, #D8328A 30%, #753872 100%);
+    background: linear-gradient(
+        var(--angle),
+        #faa245 0%,
+        #d8328a 30%,
+        #753872 100%
+    );
 }
 
 main {
@@ -95,15 +100,22 @@ main #description {
 
 main #discover-video-button {
     grid-area: cta;
-    border: 1px solid #E0E0E0;
-    background: white;
+    border: 1px solid #e0e0e0;
     width: fit-content;
     width: -moz-fit-content;
-    /* background: linear-gradient(270deg, #FAA245 0%, #D8328A 30%, #753872 100%); */
+    background: -webkit-linear-gradient(
+        270deg,
+        #faa245 0%,
+        #d8328a 30%,
+        #753872 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 main #discover-video-button i {
     margin-right: 8px;
+    background: inherit;
 }
 
 main #hero-img {
@@ -119,5 +131,5 @@ footer {
 
 footer i {
     font-size: 24px;
-    color: #BDBDBD;
+    color: #bdbdbd;
 }

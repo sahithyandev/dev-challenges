@@ -30,6 +30,7 @@ main {
 }
 
 .section {
+    @extend .card;
     .section__heading {
         @extend .montserrat-500;
         color: #4f4f4f;
@@ -38,5 +39,16 @@ main {
 }
 
 #experiences-card {
-    @extend .card;
+}
+
+#social-media-links {
+    .links {
+        display: flex;
+        // gap: 20px;
+        flex-direction: column;
+
+        a i {
+            font-size: 24px;
+        }
+    }
 }

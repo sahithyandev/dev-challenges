@@ -1,91 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-        />
-        <link
-            rel="shortcut icon"
-            href="./assets/profile-img.png"
-            type="image/png"
-        />
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+    <link rel="shortcut icon" href="./assets/profile-img.png" type="image/png" />
 
-        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
 
-        <title>Home | Sahithyan</title>
-        <link rel="stylesheet" href="./styles/index.css" />
-    </head>
-    <body>
-        <main>
-            <div class="column" id="column-1">
-                <div class="personal-info-card">
-                    <img
-                        src="./assets/profile-img.png"
-                        alt=""
-                        class="person-info-card__image"
-                    />
-                    <div class="personal-info-card__name-container">
-                        <span class="personal-info-card__name"
-                            >Sahithyan Kandathasan</span
-                        >
-                        <span class="personal-info-card__job"
-                            >Front-end Developer</span
-                        >
-                    </div>
-                    <div class="personal-info-card__contact">
-                        <span
-                            class="personal-info-card__email"
-                            data-icon="email"
-                        >
-                            <a href="#"> sahithyan2701@gmail.com </a>
-                        </span>
-                        <span class="personal-info-card__phone" data-icon="call"
-                            >(+94) 077 573 2943</span
-                        >
-                    </div>
-                    <p class="personal-info-card__description">
-                        Self-motivated developer, who is willing to learn and
-                        create outstanding UI applications.
-                    </p>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+
+    <title>Home | Sahithyan</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<body>
+    <main>
+        <div class="column" id="column-1">
+            <div class="personal-info-card">
+                <img src="./assets/profile-img.png" alt="" class="person-info-card__image" />
+                <div class="personal-info-card__name-container">
+                    <span class="personal-info-card__name">Sahithyan Kandathasan</span>
+                    <span class="personal-info-card__job">Front-end Developer</span>
                 </div>
-
-                <section class="section" id="experiences-card">
-                    <h3 class="section__heading">Experiences</h3>
-                    <p>I never worked before.</p>
-                </section>
+                <div class="personal-info-card__contact">
+                    <span class="personal-info-card__email">
+                        <a target="_blank" href="mailto:sahithyan2701@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                            sahithyan2701@gmail.com
+                        </a>
+                    </span>
+                    <span class="personal-info-card__phone">
+                        <i class="fas fa-phone"></i>
+                        (+94) 077 573 2943</span>
+                </div>
+                <p class="personal-info-card__description">
+                    Self-motivated developer, who is willing to learn and
+                    create outstanding UI applications.
+                </p>
             </div>
-            <div class="column" id="column-2">
-                <section class="section card" id="skills-section">
-                    <h3 class="section__heading">Skills</h3>
-                    <div id="skills-container">
-                        HTML, CSS, SCSS, JavaScript, React
-                    </div>
-                </section>
-                <section class="section" id="projects-section">
-                    <div class="heading-container card">
-                        <h3 class="section__heading">Projects</h3>
-                        <a href="./projects.html">
-                            <button class="btn--secondary">See All</button>
+
+            <section class="section" id="experiences-card">
+                <h3 class="section__heading">Experiences</h3>
+                <p>I never worked before.</p>
+            </section>
+            <!-- <section class="section card" id="social-media-links">
+                    <h3 class="section__heading">Catch me on social media</h3>
+                    <div class="links">
+                        <a
+                            target="_blank"
+                            href="https://www.github.com/sahithyandev"
+                            class="social--link"
+                        >
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a
+                            target="_blank"
+                            href="https://www.twitter.com/iamSahithyan"
+                            class="social--link"
+                            ><i class="fab fa-twitter"></i>
+                        </a>
+                        <a target="_blank" href="#" class="social--link">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a target="_blank" href="#" class="social--link">
+                            <i class="fab fa-instagram"></i>
                         </a>
                     </div>
-                    <div id="projects-container"></div>
-                </section>
-            </div>
-        </main>
-    </body>
-    <script src="./global.js"></script>
-    <script src="./script.js"></script>
+                </section> -->
+        </div>
+        <div class="column" id="column-2">
+            <section class="section card" id="skills-section">
+                <h3 class="section__heading">Skills</h3>
+                <div id="skills-container">
+                    HTML, CSS, SCSS, JavaScript, React
+                </div>
+            </section>
+            <section class="section" id="projects-section">
+                <div class="card heading-container">
+                    <h3 class="section__heading">Projects</h3>
+                    <a href="./projects.html">
+                        <button class="btn--secondary">See All</button>
+                    </a>
+                </div>
+                <div id="projects-container"></div>
+            </section>
+        </div>
+    </main>
+</body>
+<script src="./global.js"></script>
+<script src="./script.js"></script>
+
 </html>

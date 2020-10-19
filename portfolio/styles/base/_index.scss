@@ -37,22 +37,38 @@
     @extend .montserrat;
 }
 
-span[data-icon] {
-    display: inline-flex;
-    gap: 8px;
-    align-items: center;
-    &::before {
-        @extend .material-icons;
-        content: attr(data-icon);
-        font-size: 18px;
-    }
-}
+// span[data-icon] {
+//     display: inline-flex;
+//     gap: 8px;
+//     align-items: center;
+//     &::before {
+//         @extend .material-icons;
+//         content: attr(data-icon);
+//         font-size: 18px;
+//     }
+// }
 
 // this is not a normal card
 .card {
     padding: 22px;
     background-color: white;
     border-radius: 12px;
+    position: relative;
+
+    &:after {
+        content: "";
+        display: block;
+        width: 60%;
+        height: 20px;
+        // background-color: red;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        z-index: -1;
+        box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+    }
 }
 .tag {
     @extend .montserrat-500;
