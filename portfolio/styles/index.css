@@ -164,9 +164,8 @@ a:hover {
 .project-card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: fit-content auto;
-      grid-template-columns: -webkit-fit-content auto;
-      grid-template-columns: fit-content auto;
+  -ms-grid-columns: 250px auto;
+      grid-template-columns: 250px auto;
   -ms-grid-rows: (auto)[4];
       grid-template-rows: repeat(4, auto);
       grid-template-areas: "img tags" "img title" "img description" "img buttons";

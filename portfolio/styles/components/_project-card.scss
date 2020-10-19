@@ -1,7 +1,7 @@
 .project-card {
     @extend .card;
     display: grid;
-    grid-template-columns: fit-content auto;
+    grid-template-columns: 250px auto;
     grid-template-rows: repeat(4, auto);
     grid-template-areas:
         "img tags"
