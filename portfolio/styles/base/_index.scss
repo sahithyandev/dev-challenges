@@ -25,6 +25,14 @@
     font-feature-settings: "liga";
 }
 
+.flex {
+    display: flex;
+}
+.flex--column {
+    @extend .flex;
+    flex-direction: column;
+}
+
 * {
     @extend .montserrat;
 }
@@ -61,4 +69,14 @@ span[data-icon] {
 // OVERRIDING STYLES
 button {
     cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: #1d6bda;
+    }
 }

@@ -22,13 +22,29 @@
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
 
+        <title>Projects | Sahithyan</title>
+        <link rel="stylesheet" href="./styles/index.css" />
+
         <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
-
-        <title>Home | Sahithyan</title>
-        <link rel="stylesheet" href="./styles/index.css" />
+        <script src="./global.js"></script>
+        <style>
+            .go-back-link {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+            }
+        </style>
     </head>
     <body>
+        <div style="margin-bottom: 20px">
+            <a href="./" target="_blank" class="go-back-link">
+                <!-- <button class=""> -->
+                <i class="material-icons">west</i>
+                Go Home
+                <!-- </button> -->
+            </a>
+        </div>
         <main>
             <div class="column" id="column-1">
                 <div class="personal-info-card">
@@ -61,31 +77,16 @@
                         create outstanding UI applications.
                     </p>
                 </div>
-
-                <section class="section" id="experiences-card">
-                    <h3 class="section__heading">Experiences</h3>
-                    <p>I never worked before.</p>
-                </section>
             </div>
             <div class="column" id="column-2">
-                <section class="section card" id="skills-section">
-                    <h3 class="section__heading">Skills</h3>
-                    <div id="skills-container">
-                        HTML, CSS, SCSS, JavaScript, React
-                    </div>
-                </section>
                 <section class="section" id="projects-section">
                     <div class="heading-container card">
                         <h3 class="section__heading">Projects</h3>
-                        <a href="./projects.html">
-                            <button class="btn--secondary">See All</button>
-                        </a>
                     </div>
                     <div id="projects-container"></div>
                 </section>
             </div>
         </main>
     </body>
-    <script src="./global.js"></script>
-    <script src="./script.js"></script>
+    <script src="./projects.js"></script>
 </html>

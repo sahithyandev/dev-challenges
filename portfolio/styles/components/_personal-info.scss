@@ -1,7 +1,5 @@
 .personal-info-card {
-    @extend .card;
-    display: flex;
-    flex-direction: column;
+    @extend .card, .flex--column;
     max-width: 300px;
     gap: 10px;
 
@@ -9,11 +7,12 @@
         width: 100%;
     }
     .personal-info-card__name-container {
-        display: flex;
-        flex-direction: column;
+        @extend .flex--column;
+
         .personal-info-card__name {
             @extend .montserrat-600;
             color: #4f4f4f;
+            font-size: 1.2em;
         }
         .personal-info-card__job {
             @extend .montserrat-500;
@@ -21,10 +20,9 @@
         }
     }
     .personal-info-card__contact {
-        display: flex;
-        flex-direction: column;
+        @extend .flex--column;
         gap: 4px;
-        font-size: 0.9em;
+        // font-size: 0.9em;
         color: #4f4f4f;
     }
     .personal-info-card__description {

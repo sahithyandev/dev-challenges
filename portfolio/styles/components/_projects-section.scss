@@ -1,11 +1,23 @@
 #projects-section {
     // background-color: red;
+    @extend .flex--column;
     flex: 1;
-    .section__heading {
-        @extend .montserrat-500;
-        font-size: 1.1rem;
-        line-height: 22px;
-        color: #4f4f4f;
-        margin-top: 0;
+    gap: 10px;
+
+    .heading-container {
+        @extend .flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .section__heading {
+            font-size: 1.1rem;
+            line-height: 22px;
+            margin-bottom: 0;
+        }
+    }
+
+    #projects-container {
+        @extend .flex--column;
+        gap: 20px;
     }
 }

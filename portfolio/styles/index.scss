@@ -1,0 +1,42 @@
+@import "./base/index";
+@import "./components/index";
+
+:root {
+    font-size: 16px;
+}
+html {
+    margin: 0;
+}
+body {
+    background: #f2f2f2;
+    margin: 0;
+    padding: 32px;
+}
+
+main {
+    @extend .flex;
+    gap: 20px;
+    // background-color: red;
+    // background-color: green;
+
+    #column-2 {
+        flex: 1;
+    }
+
+    .column {
+        @extend .flex--column;
+        gap: 20px;
+    }
+}
+
+.section {
+    .section__heading {
+        @extend .montserrat-500;
+        color: #4f4f4f;
+        margin-top: 0;
+    }
+}
+
+#experiences-card {
+    @extend .card;
+}
