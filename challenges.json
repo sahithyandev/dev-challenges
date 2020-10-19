@@ -5,7 +5,47 @@
     },
     {
         "challengeTitle": "button-component",
-        "challengeDirectory": "./button-component",
         "status": "completed"
-    }
+    },
+    {
+        "challengeTitle": "checkout-page",
+        "status": "completed"
+    },
+    {
+        "challengeTitle": "edie-homepage",
+        "status": "completed"
+    },
+    {
+        "challengeTitle": "github-pages",
+        "status": "completed"
+    },
+    {
+        "challengeTitle": "input-component",
+        "status": "completed"
+    },
+    {
+        "challengeTitle": "my-gallery",
+        "status": "completed"
+    },
+    {
+        "challengeTitle": "my-team-page",
+        "status": "completed"
+    },
+    {
+        "challengeTitle": "portfolio",
+        "status": "in-progress"
+    },
+    {
+        "challengeTitle": "random-quote-generator",
+        "status": "completed"
+    },
+    {
+        "challengeTitle": "recipe-page",
+        "status": "completed"
+    },
+    {
+        "challengeTitle": "weather-app",
+        "status": "in-progress"
+    },
+    { "challengeTitle": "collab.-landing-page", "status": "in-progress" }
 ]
