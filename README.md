@@ -22,6 +22,7 @@ _Collab. Landing Page_ is not a chllange from [DevChallenges](https://devchallen
 | Random Quote Generator | [Demo](https://dev-challenges.vercel.app/http://dev-challenges.vercel.app/random-quote-generator) | Completed |
 | Recipe Page | [Demo](https://dev-challenges.vercel.app/http://dev-challenges.vercel.app/recipe-page) | Completed |
 | Weather App | [Demo](https://dev-challenges.vercel.app/http://dev-challenges.vercel.app/weather-app) | In Progress |
-| Collab. Landing Page | [Demo](https://dev-challenges.vercel.app/http://dev-challenges.vercel.app/collab.-landing-page) | Finished |
+| Windbnb | [Demo](https://dev-challenges.vercel.app/http://dev-challenges.vercel.app/windbnb) | In Progress |
+| Collab. Landing Page | [Demo](https://dev-challenges.vercel.app/http://dev-challenges.vercel.app/collab.-landing-page) | Completed |
 
 This README was created using [./README_TEMPLATE.md](./README_TEMPLATE.md) by [build-readme.js](./build-readme.js)
